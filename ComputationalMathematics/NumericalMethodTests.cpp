@@ -1,49 +1,36 @@
+#include "ODETests.h"
 #include "NumericalMethods.h"
-#include "NumericalMethodTests.h"
 #include <iostream>
-using namespace NumericalMethodsTests;
 
 // Test namespaces
 namespace NumericalMethodTests {
+
+	// Test implementations
+	double EulerMethodTest(std::function<double(double, double)> f)
+	{
+		return NumericalMethods::ODESolver::EulerMethod(1.0, 0.0, 10, 0.1, f);
+	}
+
+	double RungeKutta4MethodTest(std::function<double(double, double)> f)
+	{
+		return NumericalMethods::ODESolver::RungeKutta4Method(1.0, 0.0, 10, 0.1, f);
+	}
+
+	double FiniteDifferenceMethodTest(std::function<double(double, double)> f)
+	{
+		return NumericalMethods::ODESolver::FiniteDifferenceMethod(1.0, 0.0, 10, 0.1, f);
+	}
+
 	void ODETests() {
 		auto f = [](double x, double y) { return x + y; };
-		double result{};
 
 		// Example test for Euler Method
-		ODESolverTests::EulerMethodTest(f);
-		std::cout
-			<< "\n" << "EULER METHOD:" << "--------------------------\n"
-			<< "Eulers Method Result: " << result << "\n";
+		std::cout << "\n" << "Running EulerMethod Test: " << EulerMethodTest(f) << "\n";
 
 		// Example test for Runge-Kutta 4 Method
-		ODESolverTests::RungeKutta4MethodTest(f);
-		std::cout
-			<< "\n" << "RUNGE-KUTTA 4th-ORDER METHOD:" << "--------------------------\n"
-			<< "Runge Kutta 4 Method Result: " << result << "\n";
+		std::cout << "Running Runge-Kutta4Method Test: " << RungeKutta4MethodTest(f) << "\n";
 
 		// Example test for Finite Difference Method
-		ODESolverTests::FiniteDifferenceMethodTest(f);
-		std::cout
-			<< "\n" << "FINITE DIFFERENCE METHOD:" << "--------------------------\n"
-			<< "Finite Difference Method Result: " << result << "\n";
+		std::cout << "Running FiniteDifferenceMethod Test: " << FiniteDifferenceMethodTest(f) << "\n";
 	}
-}
-
-// Test implementations
-double ODESolverTests::EulerMethodTest(std::function<double(double, double)> f)
-{
-	double result = NumericalMethods::ODESolver::EulerMethod(1.0, 0.0, 10, 0.1, f);
-	return result;
-}
-
-double ODESolverTests::RungeKutta4MethodTest(std::function<double(double, double)> f)
-{
-	double result = NumericalMethods::ODESolver::RungeKutta4Method(1.0, 0.0, 10, 0.1, f);
-	return result;
-}
-
-double ODESolverTests::FiniteDifferenceMethodTest(std::function<double(double, double)> f)
-{
-	double result = NumericalMethods::ODESolver::FiniteDifferenceMethod(1.0, 0.0, 10, 0.1, f);
-	return result;
 }

@@ -133,7 +133,7 @@
     <ClInclude Include="NumericalMethods.h" />
     <ClInclude Include="NumericalMethodTests.h" />
     <ClInclude Include="ODESolver.h" />
-    <ClInclude Include="ODESolverTests.h" />
+    <ClInclude Include="ODETests.h" />
     <ClInclude Include="RootFinding.h" />
     <ClInclude Include="RootFindingTests.h" />
   </ItemGroup>

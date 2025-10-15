@@ -63,7 +63,7 @@
     <ClInclude Include="NumericalMethods.h">
       <Filter>Header Files\include\NumericalMethods</Filter>
     </ClInclude>
-    <ClInclude Include="ODESolverTests.h">
+    <ClInclude Include="ODETests.h">
       <Filter>Header Files\include\MathematicalTests</Filter>
     </ClInclude>
     <ClInclude Include="IntegrationTests.h">
