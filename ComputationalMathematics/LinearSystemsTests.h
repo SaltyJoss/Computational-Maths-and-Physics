@@ -1,3 +1,9 @@
 #pragma once
 
-int LinearSystemTests();
+namespace NumericalMethodsTests
+{
+	namespace LinearSystemsTests
+	{
+		double JacobiMethodTest();
+	}
+}

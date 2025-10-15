@@ -1,3 +1,10 @@
 #pragma once
 
-int EigenvalueTests();
+namespace NumericalMethodsTests
+{
+	namespace EigenvalueTests
+	{
+		double PowerMethodTest();
+		double QRAlgorithmTest();
+	}
+}

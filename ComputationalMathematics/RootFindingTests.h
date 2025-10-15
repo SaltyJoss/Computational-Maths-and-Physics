@@ -1,3 +1,11 @@
 #pragma once
 
-int RootFindingTests();
+namespace NumericalMethodsTests
+{
+	namespace RootFindingTests
+	{
+		double BisectionMethodTest();
+		double NewtonRaphsonMethodTest();
+		double SecantMethodTest();
+	}
+}

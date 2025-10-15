@@ -1,3 +1,11 @@
 #pragma once
 
-int IntegrationTests();
+namespace NumericalMethodsTests
+{
+	namespace IntergrationTests
+	{
+		double TrapezoidalRuleTest();
+		double SimpsonRuleTest();
+		double MonteCarloIntegrationTest();
+	}
+}

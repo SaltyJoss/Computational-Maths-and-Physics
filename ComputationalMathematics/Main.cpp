@@ -1,9 +1,11 @@
+
 #include <iostream>
 #include "NumericalMethodTests.cpp"
 
-int Main() {
+// Main function to run tests
+int main() {
 	std::cout << "Numerical Methods Library Test\n" << "\n";
-	NumericalMethodTests::ODESolverTests();
+	NumericalMethodTests::ODETests();
 
 	return 0;
 }

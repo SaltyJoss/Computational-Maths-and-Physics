@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace NumericalMethodsTests;
 
+// Test namespaces
 namespace NumericalMethodTests {
 	void ODETests() {
 		auto f = [](double x, double y) { return x + y; };
@@ -28,8 +29,7 @@ namespace NumericalMethodTests {
 	}
 }
 
-
-
+// Test implementations
 double ODESolverTests::EulerMethodTest(std::function<double(double, double)> f)
 {
 	double result = NumericalMethods::ODESolver::EulerMethod(1.0, 0.0, 10, 0.1, f);
