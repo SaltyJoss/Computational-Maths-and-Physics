@@ -13,15 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{e3cfecd0-0721-4a21-b915-c484992c60ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\NumericalMethods">
+      <UniqueIdentifier>{284d0dea-1a11-41d4-8e63-a2d5c08bbe92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{2377ed95-36e9-4d4e-9900-a3eaab811fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\ODESolvers">
+      <UniqueIdentifier>{642bfb90-1c42-42e8-b7d3-9a4edccd0867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\Integration">
+      <UniqueIdentifier>{f4be2beb-46f1-4c05-81a2-ff2610671b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\RootFinding">
+      <UniqueIdentifier>{409de7cc-cc17-40a1-887d-303ba86aee84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\LinearSystems">
+      <UniqueIdentifier>{0443c9ac-637d-4f72-8f57-48a056fb74a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\EigenvalueComputations">
+      <UniqueIdentifier>{017056be-c4fd-4071-84b2-1b0debfc37c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="NumericalMethods.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ODESolver.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
     </ClInclude>
+    <ClInclude Include="Integration.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
+    </ClInclude>
+    <ClInclude Include="RootFinding.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearSystems.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
+    </ClInclude>
+    <ClInclude Include="EigenvalueComputations.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
+    </ClInclude>
+    <ClInclude Include="NumericalMethods.h">
+      <Filter>Header Files\include\NumericalMethods</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NumericalMethodTests.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Euler.cpp">
+      <Filter>Source Files\src\ODESolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="RungeKutta.cpp">
+      <Filter>Source Files\src\ODESolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="FiniteDifference.cpp">
+      <Filter>Source Files\src\ODESolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="NewtonRaphson.cpp">
+      <Filter>Source Files\src\RootFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Bisection.cpp">
+      <Filter>Source Files\src\RootFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerMethod.cpp">
+      <Filter>Source Files\src\EigenvalueComputations</Filter>
+    </ClCompile>
+    <ClCompile Include="QRAlogirthm.cpp">
+      <Filter>Source Files\src\EigenvalueComputations</Filter>
+    </ClCompile>
+    <ClCompile Include="Jacobi.cpp">
+      <Filter>Source Files\src\LinearSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="Simpson.cpp">
+      <Filter>Source Files\src\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="Trapezoidal.cpp">
+      <Filter>Source Files\src\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="MonteCarlo.cpp">
+      <Filter>Source Files\src\Integration</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
