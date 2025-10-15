@@ -5,10 +5,10 @@ namespace NumericalMethods {
 	namespace ODESolver {
 
 		// Simple Euler method implementation
-		double EulerMethod(double y0, double t0, int steps, double h, std::function<double(double, double)> f) {
+		double EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < steps; i += h) {
+			for (double i = 0; i < N; i += h) {
 				y += h * f(t, y);
 				t += h;
 
@@ -18,13 +18,12 @@ namespace NumericalMethods {
 			return y;
 		}
 
-		// Simple Finite Difference method implementation
-		double FiniteDifferenceMethod(double y0, double t0, int steps, double h, std::function<double(double, double)> f) {
+		// Simple Midpoint method implementation
+		double MidpointMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < steps; i += h) {
-				// Central difference approximation
-				double y_next = y + h * f(t + h / 2.0, y + (h / 2.0) * f(t, y));
+			for (double i = 0; i < N; i += h) {
+				double y_next = y + h * f(t + h / 2, y + (h / 2) * f(t, y));
 				y = y_next;
 				t += h;
 
@@ -35,10 +34,10 @@ namespace NumericalMethods {
 		}
 
 		// Simple Runge-Kutta 4th order method implementation
-		double RungeKutta4Method(double y0, double t0, int steps, double h, std::function<double(double, double)> f) {
+		double RungeKutta4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < steps; i += h) {
+			for (double i = 0; i < N; i += h) {
 				double k1 = h * f(t, y);
 				double k2 = h * f(t + h / 2.0, y + k1 / 2.0);
 				double k3 = h * f(t + h / 2.0, y + k2 / 2.0);
