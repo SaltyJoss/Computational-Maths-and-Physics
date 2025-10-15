@@ -125,17 +125,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="EigenvalueComputations.h" />
+    <ClInclude Include="EigenvalueTests.h" />
     <ClInclude Include="Integration.h" />
+    <ClInclude Include="IntegrationTests.h" />
     <ClInclude Include="LinearSystems.h" />
+    <ClInclude Include="LinearSystemsTests.h" />
     <ClInclude Include="NumericalMethods.h" />
     <ClInclude Include="ODESolver.h" />
+    <ClInclude Include="ODESolverTests.h" />
     <ClInclude Include="RootFinding.h" />
+    <ClInclude Include="RootFindingTests.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bisection.cpp" />
     <ClCompile Include="Euler.cpp" />
     <ClCompile Include="FiniteDifference.cpp" />
     <ClCompile Include="Jacobi.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MonteCarlo.cpp" />
     <ClCompile Include="NewtonRaphson.cpp" />
     <ClCompile Include="NumericalMethodTests.cpp" />

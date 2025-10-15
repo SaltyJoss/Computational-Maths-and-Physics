@@ -37,6 +37,12 @@
     <Filter Include="Source Files\src\EigenvalueComputations">
       <UniqueIdentifier>{017056be-c4fd-4071-84b2-1b0debfc37c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\src\Tests">
+      <UniqueIdentifier>{035accec-47a9-4c04-87f5-85004b83cba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\MathematicalTests">
+      <UniqueIdentifier>{8d00c3bc-2669-4582-83af-65040ef00bbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ODESolver.h">
@@ -57,11 +63,23 @@
     <ClInclude Include="NumericalMethods.h">
       <Filter>Header Files\include\NumericalMethods</Filter>
     </ClInclude>
+    <ClInclude Include="ODESolverTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrationTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
+    <ClInclude Include="RootFindingTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearSystemsTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
+    <ClInclude Include="EigenvalueTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NumericalMethodTests.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="Euler.cpp">
       <Filter>Source Files\src\ODESolvers</Filter>
     </ClCompile>
@@ -94,6 +112,12 @@
     </ClCompile>
     <ClCompile Include="MonteCarlo.cpp">
       <Filter>Source Files\src\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="NumericalMethodTests.cpp">
+      <Filter>Source Files\src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
