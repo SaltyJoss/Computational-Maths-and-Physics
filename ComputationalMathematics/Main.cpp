@@ -46,8 +46,3 @@ void ODESolver(std::function<double(double, double)> f) {
 		<< "\tOutput: " << rk4Result << ", " << rk4Result2 << ", " << rk4Result3 << ", " << rk4Result4 << "\n\n\n";
 
 }
-/* Predicted Output (through my own calculations):
- * eulerResult -> 
- * rk4Result -> 
- * fdResult -> 
- */
