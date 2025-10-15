@@ -3,6 +3,7 @@
 
 int Main() {
 	std::cout << "Numerical Methods Library Test\n" << "\n";
-	ODETests();
+	NumericalMethodTests::ODESolverTests();
+
 	return 0;
 }

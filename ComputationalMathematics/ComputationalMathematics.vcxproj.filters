@@ -78,6 +78,9 @@
     <ClInclude Include="EigenvalueTests.h">
       <Filter>Header Files\include\MathematicalTests</Filter>
     </ClInclude>
+    <ClInclude Include="NumericalMethodTests.h">
+      <Filter>Header Files\include\MathematicalTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Euler.cpp">

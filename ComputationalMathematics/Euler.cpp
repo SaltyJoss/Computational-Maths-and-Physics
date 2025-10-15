@@ -1,4 +1,6 @@
 #include "ODESolver.h"
+#include "ODESolverTests.h"
+#include <iostream>
 
 // Simple Euler method implementation
 double NumericalMethods::ODESolver::EulerMethod(double y0, double x0, int steps, double h, std::function<double(double, double)> f) {
