@@ -2,17 +2,37 @@
 #include <iostream>
 #include <functional>
 
+void ODESolver(std::function<double(double, double)> f);
+
 // Main function to run tests
 int main() {
-    auto f = [](double x, double y) { return x + y; };
+    auto f = [](double t, double y) { return t + y; };
 
-    double eulerResult = NumericalMethods::ODESolver::EulerMethod(1.0, 0.0, 10, 0.1, f);
-    double rk4Result = NumericalMethods::ODESolver::RungeKutta4Method(1.0, 0.0, 10, 0.1, f);
-    double fdResult = NumericalMethods::ODESolver::FiniteDifferenceMethod(1.0, 0.0, 10, 0.1, f);
-
-	std::cout << "Running EulerMethod Test: " << eulerResult << "\n";
-	std::cout << "Running Runge-Kutta4Method Test: " << rk4Result << "\n";
-	std::cout << "Running FiniteDifferenceMethod Test: " << fdResult << "\n";
+	std::cout << "Testing ODE Solvers with dy/dt = t + y, y(0) = 0:\n\n";
+	ODESolver(f);
 
 	return 0;
 }
+
+// Function to test ODE solvers
+void ODESolver(std::function<double(double, double)> f) {
+	double eulerResult = NumericalMethods::ODESolver::EulerMethod(1.0, 0.0, 1, 0.25, f);
+	double fdResult = NumericalMethods::ODESolver::FiniteDifferenceMethod(1.0, 0.0, 1, 0.25, f);
+	double rk4Result = NumericalMethods::ODESolver::RungeKutta4Method(1.0, 0.0, 1, 0.25, f);
+
+	std::cout
+		<< "Running EulerMethod Test: " << "\n"
+		<< "-----\n"
+		<< "\tOutput: " << eulerResult << "\n\n\n"
+		<< "Running FiniteDifferenceMethod Test: " << "\n"
+		<< "-----\n"
+		<< "\tOutput: " << fdResult << "\n\n\n"
+		<< "Running Runge-Kutta4Method Test: " << "\n"
+		<< "-----\n"
+		<< "\tOutput: " << rk4Result << "\n\n\n";
+}
+/* Predicted Output (through my own calculations):
+ * eulerResult -> 
+ * rk4Result -> 
+ * fdResult -> 
+ */
