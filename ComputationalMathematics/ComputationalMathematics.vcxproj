@@ -24,6 +24,7 @@
     <ProjectGuid>{62a40b70-0663-40b3-9e3c-fc41e2f6119e}</ProjectGuid>
     <RootNamespace>ComputationalMathematics</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>mathlib</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
