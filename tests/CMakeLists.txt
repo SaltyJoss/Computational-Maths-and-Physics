@@ -23,6 +23,7 @@ add_executable(test_Integration test_mathlib/test_Integration.cpp)
 
 
 # Link tests with mathlib / physlib library
+set(GTest_DIR "C:/Users/Joss/Documents/Libraries/vcpkg/Installed/x64-windows/share/gtest")
 find_package(GTest CONFIG REQUIRED)
 
 # Phys
