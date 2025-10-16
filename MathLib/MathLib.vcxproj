@@ -134,12 +134,12 @@
     <Text Include="tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib\EigenvalueComputations.h" />
-    <ClInclude Include="include\mathlib\Integration.h" />
-    <ClInclude Include="include\mathlib\LinearSystems.h" />
-    <ClInclude Include="include\mathlib\NumericalMethods.h" />
-    <ClInclude Include="include\mathlib\ODESolver.h" />
-    <ClInclude Include="include\mathlib\RootFinding.h" />
+    <ClInclude Include="include\mathlib\EigenvalueComputations.hpp" />
+    <ClInclude Include="include\mathlib\Integration.hpp" />
+    <ClInclude Include="include\mathlib\LinearSystems.hpp" />
+    <ClInclude Include="include\mathlib\NumericalMethods.hpp" />
+    <ClInclude Include="include\mathlib\ODESolver.hpp" />
+    <ClInclude Include="include\mathlib\RootFinding.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

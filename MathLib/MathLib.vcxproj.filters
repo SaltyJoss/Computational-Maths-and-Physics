@@ -43,22 +43,22 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib\EigenvalueComputations.h">
+    <ClInclude Include="include\mathlib\EigenvalueComputations.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\Integration.h">
+    <ClInclude Include="include\mathlib\Integration.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\LinearSystems.h">
+    <ClInclude Include="include\mathlib\LinearSystems.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\NumericalMethods.h">
+    <ClInclude Include="include\mathlib\NumericalMethods.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\ODESolver.h">
+    <ClInclude Include="include\mathlib\ODESolver.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\RootFinding.h">
+    <ClInclude Include="include\mathlib\RootFinding.hpp">
       <Filter>Header Files\MathLib</Filter>
     </ClInclude>
   </ItemGroup>
