@@ -1,10 +1,10 @@
-#pragma message(">>> including ODESolver.hpp now...")
-#include "mathlib/ODESolver.hpp"
+#pragma message(">>> including ExplicitSolvers.hpp now...")
+#include <mathlib/ODE/ExplicitSolvers.hpp>
 #include <iostream>
 #include <functional>
 
 namespace mathlib {
-	namespace ODESolver {
+	namespace ExplicitSolvers {
 
 		// Simple Euler method implementation
 		double EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {

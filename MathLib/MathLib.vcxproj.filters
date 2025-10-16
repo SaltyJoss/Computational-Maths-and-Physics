@@ -19,21 +19,48 @@
     <Filter Include="tests">
       <UniqueIdentifier>{15f7a11c-f73e-4fbd-9cec-84b79b76a073}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\MathLib">
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{a8b2621f-e50e-43ef-afa1-123c0a01966b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib">
       <UniqueIdentifier>{8e2f0c5b-8739-4bc3-8ad0-7a97170a0944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\ODE">
+      <UniqueIdentifier>{32cf3f84-2bbf-477f-af53-151b870b02e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\PDE">
+      <UniqueIdentifier>{d06d478e-64a1-4daa-bcd4-dfe2f7667308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\Interpolation">
+      <UniqueIdentifier>{49780530-08be-4fb1-91d4-72c6dc355ebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\Integration">
+      <UniqueIdentifier>{8fa34f18-69be-4c05-86a9-4bf414e0ce2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\LinearAlgebra">
+      <UniqueIdentifier>{cdfa14ad-f740-47fe-b9c1-ddf37f60f7d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\Optimisation">
+      <UniqueIdentifier>{372e4dbc-6425-4abe-bfef-784e28b7bc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\Statistics">
+      <UniqueIdentifier>{82730d37-bf3c-48f8-b306-0686bd1a6da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\mathlib\Utils">
+      <UniqueIdentifier>{c61c2045-ae20-45ae-8406-42e7b68a4a70}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ODESolver.cpp">
+    <ClCompile Include="src\ExplicitSolvers.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_integrators.cpp">
       <Filter>tests</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_ODESolver.cpp">
+    <ClCompile Include="tests\test_ExplicitSolvers.cpp">
       <Filter>tests</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,23 +70,50 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib\EigenvalueComputations.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="include\mathlib.hpp">
+      <Filter>Header Files\include</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\Integration.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="include\mathlib\Optimisation\RootFinding.hpp">
+      <Filter>Header Files\include\mathlib\Optimisation</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\LinearSystems.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="include\mathlib\LinearAlgebra\EigenvalueComputations.hpp">
+      <Filter>Header Files\include\mathlib\LinearAlgebra</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\NumericalMethods.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="include\mathlib\LinearAlgebra\Jacobian.hpp">
+      <Filter>Header Files\include\mathlib\LinearAlgebra</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\ODESolver.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="include\mathlib\Integration\Integration.hpp">
+      <Filter>Header Files\include\mathlib\Integration</Filter>
     </ClInclude>
-    <ClInclude Include="include\mathlib\RootFinding.hpp">
-      <Filter>Header Files\MathLib</Filter>
+    <ClInclude Include="ODE.hpp">
+      <Filter>Header Files\include\mathlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Integration\Romberg.hpp">
+      <Filter>Header Files\include\mathlib\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Integration\Rules.hpp">
+      <Filter>Header Files\include\mathlib\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\LinearAlgebra\LinearAlgebra.hpp">
+      <Filter>Header Files\include\mathlib\LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Utils\Utils.hpp">
+      <Filter>Header Files\include\mathlib\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Statistics\Statistics.hpp">
+      <Filter>Header Files\include\mathlib\Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Optimisation\Optimisation.hpp">
+      <Filter>Header Files\include\mathlib\Optimisation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\PDE\PDE.hpp">
+      <Filter>Header Files\include\mathlib\PDE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\ODE\ExplicitSolvers.hpp">
+      <Filter>Header Files\include\mathlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\Interpolation\Interpolation.hpp">
+      <Filter>Header Files\include\mathlib\Interpolation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

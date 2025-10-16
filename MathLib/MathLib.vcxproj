@@ -126,20 +126,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\ODESolver.cpp" />
+    <ClCompile Include="src\ExplicitSolvers.cpp" />
     <ClCompile Include="tests\test_integrators.cpp" />
-    <ClCompile Include="tests\test_ODESolver.cpp" />
+    <ClCompile Include="tests\test_ExplicitSolvers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib\EigenvalueComputations.hpp" />
-    <ClInclude Include="include\mathlib\Integration.hpp" />
-    <ClInclude Include="include\mathlib\LinearSystems.hpp" />
-    <ClInclude Include="include\mathlib\NumericalMethods.hpp" />
-    <ClInclude Include="include\mathlib\ODESolver.hpp" />
-    <ClInclude Include="include\mathlib\RootFinding.hpp" />
+    <ClInclude Include="include\mathlib.hpp" />
+    <ClInclude Include="include\mathlib\Integration\Romberg.hpp" />
+    <ClInclude Include="include\mathlib\Integration\Rules.hpp" />
+    <ClInclude Include="include\mathlib\Integration\Integration.hpp" />
+    <ClInclude Include="include\mathlib\Interpolation\Interpolation.hpp" />
+    <ClInclude Include="include\mathlib\LinearAlgebra\EigenvalueComputations.hpp" />
+    <ClInclude Include="include\mathlib\LinearAlgebra\LinearAlgebra.hpp" />
+    <ClInclude Include="include\mathlib\LinearAlgebra\Jacobian.hpp" />
+    <ClInclude Include="include\mathlib\ODE\ExplicitSolvers.hpp" />
+    <ClInclude Include="include\mathlib\Optimisation\Optimisation.hpp" />
+    <ClInclude Include="include\mathlib\Optimisation\RootFinding.hpp" />
+    <ClInclude Include="include\mathlib\PDE\PDE.hpp" />
+    <ClInclude Include="include\mathlib\Statistics\Statistics.hpp" />
+    <ClInclude Include="include\mathlib\Utils\Utils.hpp" />
+    <ClInclude Include="ODE.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
