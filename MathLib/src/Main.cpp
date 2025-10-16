@@ -7,7 +7,5 @@ int test(std::function<double(double, double)> f);
 int main() {
     auto f = [](double t, double y) { return t + y; };
 
-	test(f);
-
 	return 0;
 }

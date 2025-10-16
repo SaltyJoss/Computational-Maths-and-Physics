@@ -5,39 +5,40 @@
 #include <cmath>
 #include <functional>
 
-// Function prototypes
-void testEulerMethod(std::function<double(double, double)> f);
-void testRK2Method(std::function<double(double, double)> f);
-void testRK4Method(std::function<double(double, double)> f);
+// Setup test fixture
+class ExplicitSolversTest : public ::testing::Test {
+protected:
+	double y0, t0, t_final, h;
+	int N;
+	std::function<double(double, double)> f;
 
+	void SetUp() override {
+		double y0 = 1.0;
+		double t0 = 0.0;
+		double t_final = 1.0;
+		double h = 0.2;
+		int N = static_cast<int>((t_final - t0) / h);
+		std::function<double(double, double)> f = [](double t, double y) { return y; };
+	}
+};
 
-int test(std::function<double(double, double)> f) {
-	std::cout << "Testing ODESolver...\n" << std::endl;
-
-	testEulerMethod(f);
-	testRK2Method(f);
-	testRK4Method(f);
-
-	return 0;
+// Test Euler method
+TEST_F(ExplicitSolversTest, EulerMethod) {
+	double y = mathlib::ODE::EulerMethod(y0, t0, N, h, f);
+	double exact = std::exp(t_final);
+	EXPECT_NEAR(y, exact, 0.1) << "EulerMethod failed: Approx=" << y << ", Exact=" << exact;
 }
 
-void testEulerMethod(std::function<double(double, double)> f) {
-	double y = mathlib::ODE::EulerMethod(1, 0, 1, 0.2, f);
-	std::cout << "Testing Euler Method:\n---\n" << "\tApprox: " << y
-		<< ", Exact: " << std::exp(1.0)
-		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
+// Test RK2 method
+TEST_F(ExplicitSolversTest, RK2Method) {
+	double y = mathlib::ODE::RK2Method(y0, t0, N, h, f);
+	double exact = std::exp(t_final);
+	EXPECT_NEAR(y, exact, 1e-2) << "RK2Method failed: Approx=" << y << ", Exact=" << exact;
 }
 
-void testRK2Method(std::function<double(double, double)> f) {
-	double y = mathlib::ODE::RK2Method(1, 0, 1, 0.2, f);
-	std::cout << "Testing RK2 Method:\n---\n" << "\tApprox: " << y 
-		<< ", Exact: " << std::exp(1.0)
-		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
-}
-
-void testRK4Method(std::function<double(double, double)> f) {
-	double y = mathlib::ODE::RK4Method(1, 0, 1, 0.2, f);
-	std::cout << "Testing RK4 Method:\n---\n" << "\tApprox: " << y 
-		<< ", Exact: " << std::exp(1.0)
-		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
+// Test RK4 method
+TEST_F(ExplicitSolversTest, RK4Method) {
+	double y = mathlib::ODE::RK4Method(y0, t0, N, h, f);
+	double exact = std::exp(t_final);
+	EXPECT_NEAR(y, exact, 1e-5) << "RK4Method failed: Approx=" << y << ", Exact=" << exact;
 }
