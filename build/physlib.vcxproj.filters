@@ -1,61 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Control\Control.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Control\Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Control\PID.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Control\PID.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\LinearAlgebra\EigenvalueSolver.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\LinearAlgebra\EigenvalueSolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\LinearAlgebra\Jacobian.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\LinearAlgebra\Jacobian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Mechanics\Dynamics.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Mechanics\Dynamics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Mechanics\Energy.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Mechanics\Energy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Mechanics\Kinematics.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Mechanics\Kinematics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Mechanics\Lagrangian.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Mechanics\Lagrangian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\ODE\DynamicsSolvers.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\ODE\DynamicsSolvers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\ODE\ForceModel.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\ODE\ForceModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\ODE\ODE.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\ODE\ODE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\ODE\TrajectoryIntegrators.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\ODE\TrajectoryIntegrators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Trajectories\Interpolation.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Trajectories\Interpolation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Trajectories\Trajectories.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Trajectories\Trajectories.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Units\Units.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Units\Units.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\src\physlib\Utils\Utils.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Vectora\src\physlib\Utils\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Joss\source\repos\Vectora\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{8DC15ACF-9FE8-3753-BBE5-F0408E42C67F}</UniqueIdentifier>
+      <UniqueIdentifier>{BE1F1607-36B3-3353-AAF2-5204208322B9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

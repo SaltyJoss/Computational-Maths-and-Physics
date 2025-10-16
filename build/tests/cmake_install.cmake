@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Joss/source/repos/Computational-Maths-and-Physics/tests
+# Install script for directory: C:/Users/Joss/source/repos/Vectora/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/tests/install_local_manifest.txt"
+  file(WRITE "C:/Users/Joss/source/repos/Vectora/build/tests/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

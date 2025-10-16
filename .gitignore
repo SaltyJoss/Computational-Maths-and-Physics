@@ -14,3 +14,4 @@
 *.obj
 *.exe
 *.pdb
+.vs/

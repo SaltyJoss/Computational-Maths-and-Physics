@@ -24,9 +24,9 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 16/10/2025 20:42:36.
+      Build started 16/10/2025 20:49:39.
       
-      Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -39,7 +39,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -47,13 +47,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.35
+      Time Elapsed 00:00:00.33
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -61,7 +61,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/CMakeScratch/TryCompile-kqc2nx"
-      binary: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/CMakeScratch/TryCompile-kqc2nx"
+      source: "C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/CMakeScratch/TryCompile-f50q8r"
+      binary: "C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/CMakeScratch/TryCompile-f50q8r"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -87,40 +87,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/CMakeScratch/TryCompile-kqc2nx'
+        Change Dir: 'C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/CMakeScratch/TryCompile-f50q8r'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_df996.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_125da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 16/10/2025 20:42:37.
+        Build started 16/10/2025 20:49:39.
         
-        Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kqc2nx\\cmTC_df996.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f50q8r\\cmTC_125da.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_df996.dir\\Debug\\".
+          Creating directory "cmTC_125da.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kqc2nx\\Debug\\".
-          Creating directory "cmTC_df996.dir\\Debug\\cmTC_df996.tlog\\".
+          Creating directory "C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f50q8r\\Debug\\".
+          Creating directory "cmTC_125da.dir\\Debug\\cmTC_125da.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_df996.dir\\Debug\\cmTC_df996.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_df996.dir\\Debug\\cmTC_df996.tlog\\unsuccessfulbuild".
+          Creating "cmTC_125da.dir\\Debug\\cmTC_125da.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_125da.dir\\Debug\\cmTC_125da.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_df996.dir\\Debug\\\\" /Fd"cmTC_df996.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_125da.dir\\Debug\\\\" /Fd"cmTC_125da.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35217 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_df996.dir\\Debug\\\\" /Fd"cmTC_df996.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_125da.dir\\Debug\\\\" /Fd"cmTC_125da.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kqc2nx\\Debug\\cmTC_df996.exe" /INCREMENTAL /ILK:"cmTC_df996.dir\\Debug\\cmTC_df996.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/CMakeScratch/TryCompile-kqc2nx/Debug/cmTC_df996.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/build/CMakeFiles/CMakeScratch/TryCompile-kqc2nx/Debug/cmTC_df996.lib" /MACHINE:X64  /machine:x64 cmTC_df996.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_df996.vcxproj -> C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kqc2nx\\Debug\\cmTC_df996.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f50q8r\\Debug\\cmTC_125da.exe" /INCREMENTAL /ILK:"cmTC_125da.dir\\Debug\\cmTC_125da.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/CMakeScratch/TryCompile-f50q8r/Debug/cmTC_125da.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Joss/source/repos/Vectora/build/CMakeFiles/CMakeScratch/TryCompile-f50q8r/Debug/cmTC_125da.lib" /MACHINE:X64  /machine:x64 cmTC_125da.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_125da.vcxproj -> C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f50q8r\\Debug\\cmTC_125da.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_df996.dir\\Debug\\cmTC_df996.tlog\\unsuccessfulbuild".
-          Touching "cmTC_df996.dir\\Debug\\cmTC_df996.tlog\\cmTC_df996.lastbuildstate".
-        Done Building Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kqc2nx\\cmTC_df996.vcxproj" (default targets).
+          Deleting file "cmTC_125da.dir\\Debug\\cmTC_125da.tlog\\unsuccessfulbuild".
+          Touching "cmTC_125da.dir\\Debug\\cmTC_125da.tlog\\cmTC_125da.lastbuildstate".
+        Done Building Project "C:\\Users\\Joss\\source\\repos\\Vectora\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f50q8r\\cmTC_125da.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.33
+        Time Elapsed 00:00:00.32
         
       exitCode: 0
   -
