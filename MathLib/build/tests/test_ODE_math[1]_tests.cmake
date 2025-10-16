@@ -1,7 +1,0 @@
-add_test([=[ODETest.EulerMethod]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ODE_math.exe [==[--gtest_filter=ODETest.EulerMethod]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ODETest.EulerMethod]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[ODETest.RK2Method]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ODE_math.exe [==[--gtest_filter=ODETest.RK2Method]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ODETest.RK2Method]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[ODETest.RK4Method]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ODE_math.exe [==[--gtest_filter=ODETest.RK4Method]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ODETest.RK4Method]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  test_ODE_math_TESTS ODETest.EulerMethod ODETest.RK2Method ODETest.RK4Method)

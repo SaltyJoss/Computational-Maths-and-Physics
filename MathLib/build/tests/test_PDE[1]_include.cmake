@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_PDE[1]_tests.cmake")
-  include("C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_PDE[1]_tests.cmake")
-else()
-  add_test(test_PDE_NOT_BUILT test_PDE_NOT_BUILT)
-endif()
