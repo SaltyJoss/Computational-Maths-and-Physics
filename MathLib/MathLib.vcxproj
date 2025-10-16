@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{62a40b70-0663-40b3-9e3c-fc41e2f6119e}</ProjectGuid>
-    <RootNamespace>ComputationalMathematics</RootNamespace>
+    <ProjectGuid>{56ae230a-5af5-4d76-aead-b39c5ee55ea3}</ProjectGuid>
+    <RootNamespace>MathLib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>mathlib</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -103,7 +102,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)include\NumericalMethods</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,16 +123,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="EigenvalueComputations.h" />
-    <ClInclude Include="Integration.h" />
-    <ClInclude Include="LinearSystems.h" />
-    <ClInclude Include="NumericalMethods.h" />
-    <ClInclude Include="ODESolver.h" />
-    <ClInclude Include="RootFinding.h" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\ODESolver.cpp" />
+    <ClCompile Include="tests\test_integrators.cpp" />
+    <ClCompile Include="tests\test_ODESolver.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ODESolver.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <Text Include="tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\mathlib\EigenvalueComputations.h" />
+    <ClInclude Include="include\mathlib\Integration.h" />
+    <ClInclude Include="include\mathlib\LinearSystems.h" />
+    <ClInclude Include="include\mathlib\NumericalMethods.h" />
+    <ClInclude Include="include\mathlib\ODESolver.h" />
+    <ClInclude Include="include\mathlib\RootFinding.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
