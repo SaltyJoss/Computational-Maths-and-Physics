@@ -138,12 +138,6 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_integrators.cpp">
-      <Filter>tests</Filter>
-    </ClCompile>
-    <ClCompile Include="tests\test_ExplicitSolvers.cpp">
-      <Filter>tests</Filter>
-    </ClCompile>
     <ClCompile Include="src\physlib\LinearAlgebra\EigenvalueSolver.cpp">
       <Filter>Source Files\src\physlib\LinearAlgebra</Filter>
     </ClCompile>
@@ -216,16 +210,16 @@
     <ClCompile Include="src\mathlib\Interpolation\Interpolation.cpp">
       <Filter>Source Files\src\mathlib\Interpolation</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_physlib\Control.cpp">
+    <ClCompile Include="tests\test_physlib\test_Control.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_physlib\test_LinearAlgebra.cpp">
+    <ClCompile Include="tests\test_physlib\test_LinearAlgebra_phys.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_physlib\test_Mechanics.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_physlib\test_ODE.cpp">
+    <ClCompile Include="tests\test_physlib\test_ODE_phys.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_physlib\test_Trajectories.cpp">
@@ -234,7 +228,7 @@
     <ClCompile Include="tests\test_physlib\test_Units.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_physlib\test_Utils.cpp">
+    <ClCompile Include="tests\test_physlib\test_Utils_phys.cpp">
       <Filter>tests\test_physlib</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_mathlib\test_Integration.cpp">
@@ -243,10 +237,10 @@
     <ClCompile Include="tests\test_mathlib\test_Interpolation.cpp">
       <Filter>tests\test_mathlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra.cpp">
+    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra_math.cpp">
       <Filter>tests\test_mathlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_mathlib\test_ODE.cpp">
+    <ClCompile Include="tests\test_mathlib\test_ODE_math.cpp">
       <Filter>tests\test_mathlib</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_mathlib\test_Optimisation.cpp">
@@ -258,7 +252,7 @@
     <ClCompile Include="tests\test_mathlib\test_statistics.cpp">
       <Filter>tests\test_mathlib</Filter>
     </ClCompile>
-    <ClCompile Include="tests\test_mathlib\test_Utils.cpp">
+    <ClCompile Include="tests\test_mathlib\test_Utils_math.cpp">
       <Filter>tests\test_mathlib</Filter>
     </ClCompile>
   </ItemGroup>
@@ -279,9 +273,6 @@
     </ClInclude>
     <ClInclude Include="include\mathlib\Integration\Integration.hpp">
       <Filter>Header Files\include\mathlib\Integration</Filter>
-    </ClInclude>
-    <ClInclude Include="ODE.hpp">
-      <Filter>Header Files\include\mathlib\ODE</Filter>
     </ClInclude>
     <ClInclude Include="include\mathlib\Integration\Romberg.hpp">
       <Filter>Header Files\include\mathlib\Integration</Filter>
@@ -381,6 +372,9 @@
     </ClInclude>
     <ClInclude Include="include\sci_lib.hpp">
       <Filter>Header Files\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\ODE\ODE.hpp">
+      <Filter>Header Files\include\mathlib\ODE</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

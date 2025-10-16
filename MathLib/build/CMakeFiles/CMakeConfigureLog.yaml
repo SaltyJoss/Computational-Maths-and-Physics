@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.26100 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 16/10/2025 11:33:23.
+      Build started 16/10/2025 19:09:46.
       
       Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -62,7 +62,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.58
+      Time Elapsed 00:00:00.55
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -77,12 +77,12 @@ events:
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-1z2x1i"
-      binary: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-1z2x1i"
+      source: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-m1eems"
+      binary: "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-m1eems"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -96,40 +96,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-1z2x1i'
+        Change Dir: 'C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-m1eems'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cdc2a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7f0f6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 16/10/2025 11:33:24.
+        Build started 16/10/2025 19:09:47.
         
-        Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1z2x1i\\cmTC_cdc2a.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m1eems\\cmTC_7f0f6.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_cdc2a.dir\\Debug\\".
+          Creating directory "cmTC_7f0f6.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1z2x1i\\Debug\\".
-          Creating directory "cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.tlog\\".
+          Creating directory "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m1eems\\Debug\\".
+          Creating directory "cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.tlog\\unsuccessfulbuild".
+          Creating "cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cdc2a.dir\\Debug\\\\" /Fd"cmTC_cdc2a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f0f6.dir\\Debug\\\\" /Fd"cmTC_7f0f6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35217 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cdc2a.dir\\Debug\\\\" /Fd"cmTC_cdc2a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f0f6.dir\\Debug\\\\" /Fd"cmTC_7f0f6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1z2x1i\\Debug\\cmTC_cdc2a.exe" /INCREMENTAL /ILK:"cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-1z2x1i/Debug/cmTC_cdc2a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-1z2x1i/Debug/cmTC_cdc2a.lib" /MACHINE:X64  /machine:x64 cmTC_cdc2a.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_cdc2a.vcxproj -> C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1z2x1i\\Debug\\cmTC_cdc2a.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m1eems\\Debug\\cmTC_7f0f6.exe" /INCREMENTAL /ILK:"cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-m1eems/Debug/cmTC_7f0f6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/CMakeScratch/TryCompile-m1eems/Debug/cmTC_7f0f6.lib" /MACHINE:X64  /machine:x64 cmTC_7f0f6.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_7f0f6.vcxproj -> C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m1eems\\Debug\\cmTC_7f0f6.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.tlog\\unsuccessfulbuild".
-          Touching "cmTC_cdc2a.dir\\Debug\\cmTC_cdc2a.tlog\\cmTC_cdc2a.lastbuildstate".
-        Done Building Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1z2x1i\\cmTC_cdc2a.vcxproj" (default targets).
+          Deleting file "cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7f0f6.dir\\Debug\\cmTC_7f0f6.tlog\\cmTC_7f0f6.lastbuildstate".
+        Done Building Project "C:\\Users\\Joss\\source\\repos\\Computational-Maths-and-Physics\\MathLib\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m1eems\\cmTC_7f0f6.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.34
+        Time Elapsed 00:00:00.30
         
       exitCode: 0
   -
@@ -137,7 +137,7 @@ events:
     backtrace:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -155,7 +155,7 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.44.35217.0

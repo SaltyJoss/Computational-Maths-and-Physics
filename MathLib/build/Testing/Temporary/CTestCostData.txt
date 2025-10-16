@@ -1,7 +1,4 @@
-ExplicitSolversTest.EulerMethod 0 0
-ExplicitSolversTest.RK2Method 0 0
-ExplicitSolversTest.RK4Method 0 0
+ODETest.EulerMethod 1 0.0064468
+ODETest.RK2Method 1 0.006301
+ODETest.RK4Method 1 0.0055761
 ---
-ExplicitSolversTest.EulerMethod
-ExplicitSolversTest.RK2Method
-ExplicitSolversTest.RK4Method

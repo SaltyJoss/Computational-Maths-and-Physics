@@ -174,17 +174,77 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\Main.vcxproj">
+      <Project>{A08A2179-A627-37CD-9551-4B5BABDD03F6}</Project>
+      <Name>Main</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\mathlib.vcxproj">
       <Project>{E39043BE-DD93-3780-AF96-73A272610AD2}</Project>
       <Name>mathlib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_ExplicitSolvers.vcxproj">
-      <Project>{C50CC030-645E-3780-BC29-FD06A1C050DF}</Project>
-      <Name>test_ExplicitSolvers</Name>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\physlib.vcxproj">
+      <Project>{74193FA9-B3C4-3411-B43B-DA9B194E6B57}</Project>
+      <Name>physlib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_integrators.vcxproj">
-      <Project>{DC666AE7-CCDD-32A3-98C6-77D78A545760}</Project>
-      <Name>test_integrators</Name>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Control.vcxproj">
+      <Project>{7BB4152D-B280-38F1-BE3C-F62418BFB5AF}</Project>
+      <Name>test_Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Integration.vcxproj">
+      <Project>{758CA485-F097-313C-A976-8BF29C1DD6F9}</Project>
+      <Name>test_Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Interpolation.vcxproj">
+      <Project>{3D40FC1C-10D8-39E6-AB9E-25DD45285F2D}</Project>
+      <Name>test_Interpolation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_LinearAlgebra_math.vcxproj">
+      <Project>{FCE73CD0-8B6F-3216-850D-69473D157F83}</Project>
+      <Name>test_LinearAlgebra_math</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_LinearAlgebra_phys.vcxproj">
+      <Project>{6C76091B-EA55-3591-A3F6-A44995164E5F}</Project>
+      <Name>test_LinearAlgebra_phys</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Mechanics.vcxproj">
+      <Project>{8FBC8D60-7C7C-3626-9C66-68EFB6C2BE45}</Project>
+      <Name>test_Mechanics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_ODE_math.vcxproj">
+      <Project>{399B0625-C8AE-3229-95D8-5B426DCF1A49}</Project>
+      <Name>test_ODE_math</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_ODE_phys.vcxproj">
+      <Project>{AFE09940-FED4-3878-B30B-01EDB6CEE700}</Project>
+      <Name>test_ODE_phys</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Optimisation.vcxproj">
+      <Project>{B897AA1C-C07A-3728-BBF0-99F6B3A4FFB3}</Project>
+      <Name>test_Optimisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_PDE.vcxproj">
+      <Project>{0C561F27-57F2-354F-BAB5-71F52641072D}</Project>
+      <Name>test_PDE</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Statistics.vcxproj">
+      <Project>{329B1285-A419-3A84-8F87-57C1E2A68ABC}</Project>
+      <Name>test_Statistics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Trajectories.vcxproj">
+      <Project>{E130AF3C-0C25-3C71-9094-83EC54069BC8}</Project>
+      <Name>test_Trajectories</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Units.vcxproj">
+      <Project>{B45DCFCA-B789-34A2-9D2D-46339DA04AEE}</Project>
+      <Name>test_Units</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Utils_math.vcxproj">
+      <Project>{9EFCF8D8-29C6-3983-994F-58E404D8EDFB}</Project>
+      <Name>test_Utils_math</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\test_Utils_phys.vcxproj">
+      <Project>{B04B54CE-B83E-3FBB-8690-584ED92AD8F6}</Project>
+      <Name>test_Utils_phys</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

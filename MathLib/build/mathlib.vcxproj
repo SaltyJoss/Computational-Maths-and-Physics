@@ -82,6 +82,7 @@
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
@@ -93,6 +94,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
@@ -118,6 +120,7 @@
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -128,6 +131,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -155,6 +159,7 @@
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -165,6 +170,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -192,6 +198,7 @@
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -203,6 +210,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
@@ -281,7 +289,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\ExplicitSolvers.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Integration\Romberg.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Integration\Rules.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Interpolation\Interpolation.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\LinearAlgebra\EigenvalueComputations.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\LinearAlgebra\Jacobian.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\ODE\ExplicitSolvers.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Optimisation\RootFinding.cpp" />
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

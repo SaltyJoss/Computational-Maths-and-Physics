@@ -152,23 +152,21 @@
     <ClCompile Include="src\physlib\Trajectories\Trajectories.cpp" />
     <ClCompile Include="src\physlib\Units\Units.cpp" />
     <ClCompile Include="src\physlib\Utils\Utils.cpp" />
-    <ClCompile Include="tests\test_integrators.cpp" />
-    <ClCompile Include="tests\test_ExplicitSolvers.cpp" />
     <ClCompile Include="tests\test_mathlib\test_Integration.cpp" />
     <ClCompile Include="tests\test_mathlib\test_Interpolation.cpp" />
-    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra.cpp" />
-    <ClCompile Include="tests\test_mathlib\test_ODE.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra_math.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_ODE_math.cpp" />
     <ClCompile Include="tests\test_mathlib\test_Optimisation.cpp" />
     <ClCompile Include="tests\test_mathlib\test_PDE.cpp" />
     <ClCompile Include="tests\test_mathlib\test_statistics.cpp" />
-    <ClCompile Include="tests\test_mathlib\test_Utils.cpp" />
-    <ClCompile Include="tests\test_physlib\Control.cpp" />
-    <ClCompile Include="tests\test_physlib\test_LinearAlgebra.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_Utils_math.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Control.cpp" />
+    <ClCompile Include="tests\test_physlib\test_LinearAlgebra_phys.cpp" />
     <ClCompile Include="tests\test_physlib\test_Mechanics.cpp" />
-    <ClCompile Include="tests\test_physlib\test_ODE.cpp" />
+    <ClCompile Include="tests\test_physlib\test_ODE_phys.cpp" />
     <ClCompile Include="tests\test_physlib\test_Trajectories.cpp" />
     <ClCompile Include="tests\test_physlib\test_Units.cpp" />
-    <ClCompile Include="tests\test_physlib\test_Utils.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Utils_phys.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="tests\CMakeLists.txt" />
@@ -183,6 +181,7 @@
     <ClInclude Include="include\mathlib\LinearAlgebra\Jacobian.hpp" />
     <ClInclude Include="include\mathlib\mathlib.hpp" />
     <ClInclude Include="include\mathlib\ODE\ExplicitSolvers.hpp" />
+    <ClInclude Include="include\mathlib\ODE\ODE.hpp" />
     <ClInclude Include="include\mathlib\Optimisation\Optimisation.hpp" />
     <ClInclude Include="include\mathlib\Optimisation\RootFinding.hpp" />
     <ClInclude Include="include\mathlib\PDE\PDE.hpp" />
@@ -211,7 +210,6 @@
     <ClInclude Include="include\physlib\Units\Units.hpp" />
     <ClInclude Include="include\physlib\Utils\Utils.hpp" />
     <ClInclude Include="include\sci_lib.hpp" />
-    <ClInclude Include="ODE.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

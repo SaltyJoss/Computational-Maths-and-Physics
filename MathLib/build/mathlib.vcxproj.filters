@@ -1,7 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\ExplicitSolvers.cpp">
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Integration\Romberg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Integration\Rules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Interpolation\Interpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\LinearAlgebra\EigenvalueComputations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\LinearAlgebra\Jacobian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\ODE\ExplicitSolvers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Optimisation\RootFinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\src\mathlib\Utils\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

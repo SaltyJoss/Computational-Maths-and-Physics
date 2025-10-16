@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_Statistics[1]_tests.cmake")
+  include("C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_Statistics[1]_tests.cmake")
+else()
+  add_test(test_Statistics_NOT_BUILT test_Statistics_NOT_BUILT)
+endif()
