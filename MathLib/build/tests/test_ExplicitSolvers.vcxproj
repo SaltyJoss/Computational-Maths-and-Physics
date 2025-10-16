@@ -24,6 +24,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C50CC030-645E-3780-BC29-FD06A1C050DF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>test_ExplicitSolvers</ProjectName>
@@ -54,7 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -87,7 +88,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest/include" /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -102,16 +103,16 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -119,8 +120,17 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ExplicitSolvers.exe -installedDir C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -D TEST_TARGET=test_ExplicitSolvers -D TEST_EXECUTABLE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ExplicitSolvers.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_ExplicitSolvers_TESTS -D CTEST_FILE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_ExplicitSolvers[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/GoogleTestAddTests.cmake"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -131,7 +141,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\Debug\mathlib.lib;..\lib\Debug\gtest_main.lib;..\lib\Debug\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Debug\mathlib.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\debug\lib\manual-link\gtest_main.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\debug\lib\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -147,7 +157,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest/include" /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -161,18 +171,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,8 +190,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Release/test_ExplicitSolvers.exe -installedDir C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -D TEST_TARGET=test_ExplicitSolvers -D TEST_EXECUTABLE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Release/test_ExplicitSolvers.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_ExplicitSolvers_TESTS -D CTEST_FILE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_ExplicitSolvers[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/GoogleTestAddTests.cmake"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -192,7 +211,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\Release\mathlib.lib;..\lib\Release\gtest_main.lib;..\lib\Release\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Release\mathlib.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\manual-link\gtest_main.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -208,7 +227,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest/include" /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -222,18 +241,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -241,8 +260,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/MinSizeRel/test_ExplicitSolvers.exe -installedDir C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -D TEST_TARGET=test_ExplicitSolvers -D TEST_EXECUTABLE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/MinSizeRel/test_ExplicitSolvers.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_ExplicitSolvers_TESTS -D CTEST_FILE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_ExplicitSolvers[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/GoogleTestAddTests.cmake"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -253,7 +281,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\MinSizeRel\mathlib.lib;..\lib\MinSizeRel\gtest_main.lib;..\lib\MinSizeRel\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\MinSizeRel\mathlib.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\manual-link\gtest_main.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -269,7 +297,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest/include" /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-src/googletest"</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -284,16 +312,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <SupportJustMyCode></SupportJustMyCode>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GTEST_LINKED_AS_SHARED_LIBRARY=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\include;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -301,8 +329,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>	</Message>
       <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/RelWithDebInfo/test_ExplicitSolvers.exe -installedDir C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -D TEST_TARGET=test_ExplicitSolvers -D TEST_EXECUTABLE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/RelWithDebInfo/test_ExplicitSolvers.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_ExplicitSolvers_TESTS -D CTEST_FILE=C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/test_ExplicitSolvers[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/GoogleTestAddTests.cmake"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -313,7 +350,7 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\RelWithDebInfo\mathlib.lib;..\lib\RelWithDebInfo\gtest_main.lib;..\lib\RelWithDebInfo\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\RelWithDebInfo\mathlib.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\manual-link\gtest_main.lib;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\lib\gtest.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -339,7 +376,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfig.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfigVersion.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-debug.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-release.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/tests/CMakeLists.txt</Message>
@@ -352,7 +389,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfig.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfigVersion.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-debug.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-release.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/tests/CMakeLists.txt</Message>
@@ -365,7 +402,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfig.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfigVersion.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-debug.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-release.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/tests/CMakeLists.txt</Message>
@@ -378,7 +415,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\GoogleTest.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfig.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestConfigVersion.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-debug.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets-release.cmake;C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\vcpkg\installed\x64-windows\share\gtest\GTestTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -393,14 +430,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-build\googletest\gtest.vcxproj">
-      <Project>{0B507087-0229-36DD-A8CC-8769CF4442A7}</Project>
-      <Name>gtest</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\_deps\googletest-build\googletest\gtest_main.vcxproj">
-      <Project>{49390452-6B58-3D85-A411-DBF75188A191}</Project>
-      <Name>gtest_main</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Joss\source\repos\Computational-Maths-and-Physics\MathLib\build\mathlib.vcxproj">
       <Project>{E39043BE-DD93-3780-AF96-73A272610AD2}</Project>

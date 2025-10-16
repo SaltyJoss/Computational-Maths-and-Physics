@@ -5,6 +5,7 @@ project(MathLib LANGUAGES CXX)
 # Use modern C++
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Create the library
 add_library(mathlib

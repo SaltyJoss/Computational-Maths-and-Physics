@@ -1,6 +1,7 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeCXXInformation.cmake
 C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDependentOption.cmake
 C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeGenericSystem.cmake
 C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake
 C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake
@@ -23,3 +24,4 @@ C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/CMakeLists.tx
 C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/3.31.6-msvc6/CMakeCXXCompiler.cmake
 C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/3.31.6-msvc6/CMakeRCCompiler.cmake
 C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/CMakeFiles/3.31.6-msvc6/CMakeSystem.cmake
+C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/vcpkg/scripts/buildsystems/vcpkg.cmake

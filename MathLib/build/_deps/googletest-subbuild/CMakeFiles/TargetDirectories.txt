@@ -1,3 +1,0 @@
-C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
-C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir
