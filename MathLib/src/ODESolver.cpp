@@ -1,7 +1,9 @@
-#include "ODESolver.h"
+#pragma message(">>> including ODESolver.h now...")
+#include "mathlib/ODESolver.h"
 #include <iostream>
+#include <functional>
 
-namespace NumericalMethods {
+namespace mathlib {
 	namespace ODESolver {
 
 		// Simple Euler method implementation
@@ -12,14 +14,14 @@ namespace NumericalMethods {
 				y += h * f(t, y);
 				t += h;
 
-				std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
+				//std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
 			}
-			std::cout << "\n";
+			//std::cout << "\n";
 			return y;
 		}
 
-		// Simple Midpoint method implementation
-		double MidpointMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
+		// Simple Runge-Kutta 2nd order / Midpoint method implementation
+		double RK2Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
 			for (double i = 0; i < N; i += h) {
@@ -27,14 +29,14 @@ namespace NumericalMethods {
 				y = y_next;
 				t += h;
 
-				std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
+				//std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
 			}
-			std::cout << "\n";
+			//std::cout << "\n";
 			return y;
 		}
 
 		// Simple Runge-Kutta 4th order method implementation
-		double RungeKutta4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
+		double RK4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
 			for (double i = 0; i < N; i += h) {
@@ -45,9 +47,9 @@ namespace NumericalMethods {
 				y += (k1 + 2 * k2 + 2 * k3 + k4) / 6.0;
 				t += h;
 
-				std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
+				//std::cout << "t: " << t << " , y: " << y << " , i: " << i << "\n";
 			}
-			std::cout << "\n";
+			//std::cout << "\n";
 			return y;
 		}
 	}

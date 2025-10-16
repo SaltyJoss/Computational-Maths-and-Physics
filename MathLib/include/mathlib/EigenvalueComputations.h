@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
 
-namespace NumericalMethods
+namespace mathlib
 {
 	namespace EigenvalueComputations
 	{

@@ -1,8 +1,41 @@
-#include "ODESolver.h"
+#include "mathlib/ODESolver.h"
 #include <iostream>
+#include <cmath>
+#include <functional>
 
-int main() {
-	std::cout << "Testing ODESolver..." << std::endl;
+// Function prototypes
+void testEulerMethod(std::function<double(double, double)> f);
+void testRK2Method(std::function<double(double, double)> f);
+void testRK4Method(std::function<double(double, double)> f);
+
+
+int test(std::function<double(double, double)> f) {
+	std::cout << "Testing ODESolver...\n" << std::endl;
+
+	testEulerMethod(f);
+	testRK2Method(f);
+	testRK4Method(f);
 
 	return 0;
+}
+
+void testEulerMethod(std::function<double(double, double)> f) {
+	double y = mathlib::ODESolver::EulerMethod(1, 0, 1, 0.2, f);
+	std::cout << "Testing Euler Method:\n\n" << "Approx: " << y
+		<< ", Exact: " << std::exp(1.0)
+		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
+}
+
+void testRK2Method(std::function<double(double, double)> f) {
+	double y = mathlib::ODESolver::RK2Method(1, 0, 1, 0.2, f);
+	std::cout << "Testing RK2 Method:\n\n"
+		<< "Approx: " << y << ", Exact: " << std::exp(1.0)
+		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
+}
+
+void testRK4Method(std::function<double(double, double)> f) {
+	double y = mathlib::ODESolver::RK4Method(1, 0, 1, 0.2, f);
+	std::cout << "Testing RK4 Method:\n\n" << "Approx: "
+		<< y << ", Exact: " << std::exp(1.0)
+		<< ", Error: " << std::abs(y - std::exp(1.0)) << "\n\n";
 }
