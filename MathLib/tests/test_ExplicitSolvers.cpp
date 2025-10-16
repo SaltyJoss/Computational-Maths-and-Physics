@@ -8,18 +8,14 @@
 // Setup test fixture
 class ExplicitSolversTest : public ::testing::Test {
 protected:
-	double y0, t0, t_final, h;
-	int N;
-	std::function<double(double, double)> f;
+	double y0 = 1.0;	  // Initial condition
+	double t0 = 0.0;	  // Initial time
+	double t_final = 1.0; // Final time
+	double h = 0.2;		  // Step size
 
-	void SetUp() override {
-		double y0 = 1.0;
-		double t0 = 0.0;
-		double t_final = 1.0;
-		double h = 0.2;
-		int N = static_cast<int>((t_final - t0) / h);
-		std::function<double(double, double)> f = [](double t, double y) { return y; };
-	}
+	int N = static_cast<int>((t_final - t0) / h); // Number of steps
+	
+	std::function<double(double, double)> f = [](double t, double y) { return y; }; // Differential equation
 };
 
 // Test Euler method

@@ -1,1 +1,7 @@
-set(  test_ExplicitSolvers_TESTS)
+add_test([=[ExplicitSolversTest.EulerMethod]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ExplicitSolvers.exe [==[--gtest_filter=ExplicitSolversTest.EulerMethod]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ExplicitSolversTest.EulerMethod]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[ExplicitSolversTest.RK2Method]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ExplicitSolvers.exe [==[--gtest_filter=ExplicitSolversTest.RK2Method]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ExplicitSolversTest.RK2Method]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[ExplicitSolversTest.RK4Method]=]  C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests/Debug/test_ExplicitSolvers.exe [==[--gtest_filter=ExplicitSolversTest.RK4Method]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ExplicitSolversTest.RK4Method]=]  PROPERTIES WORKING_DIRECTORY C:/Users/Joss/source/repos/Computational-Maths-and-Physics/MathLib/build/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_ExplicitSolvers_TESTS ExplicitSolversTest.EulerMethod ExplicitSolversTest.RK2Method ExplicitSolversTest.RK4Method)
