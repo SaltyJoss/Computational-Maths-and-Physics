@@ -1,23 +1,23 @@
-# Specify the minimum CMake version and project info
+# Root CMakeList
 cmake_minimum_required(VERSION 3.15)
 project(MathLib LANGUAGES CXX)
 
-# Use modern C++
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Create the library
-add_library(mathlib
-    ${PROJECT_SOURCE_DIR}/src/ExplicitSolvers.cpp
+file(GLOB_RECURSE MATHLIB_SOURCES
+    "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-# Tell CMake where to find headers when building and using the library
+add_library(mathlib STATIC ${MATHLIB_SOURCES})
+
 target_include_directories(mathlib 
     PUBLIC
         ${PROJECT_SOURCE_DIR}/include
 )
 
-# Add the tests folder
+target_compile_options(mathlib PRIVATE -Wall -Wextra -O2)
+
 enable_testing()
 add_subdirectory(${PROJECT_SOURCE_DIR}/tests)

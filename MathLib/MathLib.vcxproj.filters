@@ -76,12 +76,66 @@
     <Filter Include="Header Files\include\physlib\Mechanics">
       <UniqueIdentifier>{135d2ec6-717a-405e-8d87-482cae890fc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\src\physlib">
+      <UniqueIdentifier>{7306d204-a1a7-4cca-8683-11ca0c1d49b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\LinearAlgebra">
+      <UniqueIdentifier>{53a5f0a2-f903-4d23-8038-20434f35a329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\Control">
+      <UniqueIdentifier>{0dd9a28f-8ed7-402b-a9dc-065614639958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\Mechanics">
+      <UniqueIdentifier>{d51d66ca-2607-4cc9-90a4-f1eea9526d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\Units">
+      <UniqueIdentifier>{2efcfb4e-5199-4c50-9d3f-f294e958df84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\Utils">
+      <UniqueIdentifier>{3d50d985-de06-44e8-ae75-ff86be14b0e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib">
+      <UniqueIdentifier>{795e255a-a817-44a6-9c79-c46ab6d81984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\Interpolation">
+      <UniqueIdentifier>{9eefe99c-12b8-4070-8222-f6930baaee61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\Integration">
+      <UniqueIdentifier>{a38a5cb6-abc2-4ee7-bf46-1057f14a22dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\LinearAlgebra">
+      <UniqueIdentifier>{0e085ebe-b5e2-4826-aec1-184a5061b762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\Utils">
+      <UniqueIdentifier>{206ed84d-0694-4533-9c7e-06d1a8798880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\Statistics">
+      <UniqueIdentifier>{796893bd-3427-4aba-9706-2a534dce8129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\Optimisation">
+      <UniqueIdentifier>{21b371f9-cb6f-4fd9-ab78-9c25b88ad2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\PDE">
+      <UniqueIdentifier>{83e4b682-73bd-40ee-8bfc-7813778e5faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\mathlib\ODE">
+      <UniqueIdentifier>{1780fc7c-8eb0-4396-8718-68b64c6e6ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\Trajectories">
+      <UniqueIdentifier>{cf873d6d-7b7c-42de-8f6a-98a43dd95c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\physlib\ODE">
+      <UniqueIdentifier>{1c6b60a1-b0b8-4082-8f7b-c1f6a19a3dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\test_mathlib">
+      <UniqueIdentifier>{1e597800-9922-440d-85f7-ed29261d8ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\test_physlib">
+      <UniqueIdentifier>{320b7384-d19f-45c9-afc3-bc01529f41eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ExplicitSolvers.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
     <ClCompile Include="tests\test_integrators.cpp">
@@ -90,6 +144,123 @@
     <ClCompile Include="tests\test_ExplicitSolvers.cpp">
       <Filter>tests</Filter>
     </ClCompile>
+    <ClCompile Include="src\physlib\LinearAlgebra\EigenvalueSolver.cpp">
+      <Filter>Source Files\src\physlib\LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\LinearAlgebra\Jacobian.cpp">
+      <Filter>Source Files\src\physlib\LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Control\Control.cpp">
+      <Filter>Source Files\src\physlib\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Control\PID.cpp">
+      <Filter>Source Files\src\physlib\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Mechanics\Energy.cpp">
+      <Filter>Source Files\src\physlib\Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Mechanics\Kinematics.cpp">
+      <Filter>Source Files\src\physlib\Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Mechanics\Lagrangian.cpp">
+      <Filter>Source Files\src\physlib\Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\ODE\DynamicsSolvers.cpp">
+      <Filter>Source Files\src\physlib\ODE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\ODE\ForceModel.cpp">
+      <Filter>Source Files\src\physlib\ODE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\ODE\ODE.cpp">
+      <Filter>Source Files\src\physlib\ODE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\ODE\TrajectoryIntegrators.cpp">
+      <Filter>Source Files\src\physlib\ODE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Mechanics\Dynamics.cpp">
+      <Filter>Source Files\src\physlib\Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Trajectories\Interpolation.cpp">
+      <Filter>Source Files\src\physlib\Trajectories</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Trajectories\Trajectories.cpp">
+      <Filter>Source Files\src\physlib\Trajectories</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Utils\Utils.cpp">
+      <Filter>Source Files\src\physlib\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physlib\Units\Units.cpp">
+      <Filter>Source Files\src\physlib\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\Utils\Utils.cpp">
+      <Filter>Source Files\src\mathlib\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\Optimisation\RootFinding.cpp">
+      <Filter>Source Files\src\mathlib\Optimisation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\ODE\ExplicitSolvers.cpp">
+      <Filter>Source Files\src\mathlib\ODE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\LinearAlgebra\EigenvalueComputations.cpp">
+      <Filter>Source Files\src\mathlib\LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\LinearAlgebra\Jacobian.cpp">
+      <Filter>Source Files\src\mathlib\LinearAlgebra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\Integration\Romberg.cpp">
+      <Filter>Source Files\src\mathlib\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\Integration\Rules.cpp">
+      <Filter>Source Files\src\mathlib\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathlib\Interpolation\Interpolation.cpp">
+      <Filter>Source Files\src\mathlib\Interpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\Control.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_LinearAlgebra.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_Mechanics.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_ODE.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_Trajectories.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_Units.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_physlib\test_Utils.cpp">
+      <Filter>tests\test_physlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_Integration.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_Interpolation.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_ODE.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_Optimisation.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_PDE.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_statistics.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test_mathlib\test_Utils.cpp">
+      <Filter>tests\test_mathlib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="tests\CMakeLists.txt">
@@ -97,9 +268,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib.hpp">
-      <Filter>Header Files\include</Filter>
-    </ClInclude>
     <ClInclude Include="include\mathlib\Optimisation\RootFinding.hpp">
       <Filter>Header Files\include\mathlib\Optimisation</Filter>
     </ClInclude>
@@ -207,6 +375,12 @@
     </ClInclude>
     <ClInclude Include="include\physlib\ODE\TrajectoryIntegrators.hpp">
       <Filter>Header Files\include\physlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mathlib\mathlib.hpp">
+      <Filter>Header Files\include\mathlib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sci_lib.hpp">
+      <Filter>Header Files\include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

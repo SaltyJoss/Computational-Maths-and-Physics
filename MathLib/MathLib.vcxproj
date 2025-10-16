@@ -128,15 +128,52 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\ExplicitSolvers.cpp" />
+    <ClCompile Include="src\mathlib\Integration\Romberg.cpp" />
+    <ClCompile Include="src\mathlib\Integration\Rules.cpp" />
+    <ClCompile Include="src\mathlib\Interpolation\Interpolation.cpp" />
+    <ClCompile Include="src\mathlib\LinearAlgebra\EigenvalueComputations.cpp" />
+    <ClCompile Include="src\mathlib\LinearAlgebra\Jacobian.cpp" />
+    <ClCompile Include="src\mathlib\ODE\ExplicitSolvers.cpp" />
+    <ClCompile Include="src\mathlib\Optimisation\RootFinding.cpp" />
+    <ClCompile Include="src\mathlib\Utils\Utils.cpp" />
+    <ClCompile Include="src\physlib\Control\Control.cpp" />
+    <ClCompile Include="src\physlib\Control\PID.cpp" />
+    <ClCompile Include="src\physlib\LinearAlgebra\EigenvalueSolver.cpp" />
+    <ClCompile Include="src\physlib\LinearAlgebra\Jacobian.cpp" />
+    <ClCompile Include="src\physlib\Mechanics\Dynamics.cpp" />
+    <ClCompile Include="src\physlib\Mechanics\Energy.cpp" />
+    <ClCompile Include="src\physlib\Mechanics\Kinematics.cpp" />
+    <ClCompile Include="src\physlib\Mechanics\Lagrangian.cpp" />
+    <ClCompile Include="src\physlib\ODE\DynamicsSolvers.cpp" />
+    <ClCompile Include="src\physlib\ODE\ForceModel.cpp" />
+    <ClCompile Include="src\physlib\ODE\ODE.cpp" />
+    <ClCompile Include="src\physlib\ODE\TrajectoryIntegrators.cpp" />
+    <ClCompile Include="src\physlib\Trajectories\Interpolation.cpp" />
+    <ClCompile Include="src\physlib\Trajectories\Trajectories.cpp" />
+    <ClCompile Include="src\physlib\Units\Units.cpp" />
+    <ClCompile Include="src\physlib\Utils\Utils.cpp" />
     <ClCompile Include="tests\test_integrators.cpp" />
     <ClCompile Include="tests\test_ExplicitSolvers.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_Integration.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_Interpolation.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_LinearAlgebra.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_ODE.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_Optimisation.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_PDE.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_statistics.cpp" />
+    <ClCompile Include="tests\test_mathlib\test_Utils.cpp" />
+    <ClCompile Include="tests\test_physlib\Control.cpp" />
+    <ClCompile Include="tests\test_physlib\test_LinearAlgebra.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Mechanics.cpp" />
+    <ClCompile Include="tests\test_physlib\test_ODE.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Trajectories.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Units.cpp" />
+    <ClCompile Include="tests\test_physlib\test_Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\mathlib.hpp" />
     <ClInclude Include="include\mathlib\Integration\Romberg.hpp" />
     <ClInclude Include="include\mathlib\Integration\Rules.hpp" />
     <ClInclude Include="include\mathlib\Integration\Integration.hpp" />
@@ -144,6 +181,7 @@
     <ClInclude Include="include\mathlib\LinearAlgebra\EigenvalueComputations.hpp" />
     <ClInclude Include="include\mathlib\LinearAlgebra\LinearAlgebra.hpp" />
     <ClInclude Include="include\mathlib\LinearAlgebra\Jacobian.hpp" />
+    <ClInclude Include="include\mathlib\mathlib.hpp" />
     <ClInclude Include="include\mathlib\ODE\ExplicitSolvers.hpp" />
     <ClInclude Include="include\mathlib\Optimisation\Optimisation.hpp" />
     <ClInclude Include="include\mathlib\Optimisation\RootFinding.hpp" />
@@ -172,6 +210,7 @@
     <ClInclude Include="include\physlib\Trajectories\Trajectories.hpp" />
     <ClInclude Include="include\physlib\Units\Units.hpp" />
     <ClInclude Include="include\physlib\Utils\Utils.hpp" />
+    <ClInclude Include="include\sci_lib.hpp" />
     <ClInclude Include="ODE.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
