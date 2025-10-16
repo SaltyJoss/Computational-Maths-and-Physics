@@ -49,6 +49,33 @@
     <Filter Include="Header Files\include\mathlib\Utils">
       <UniqueIdentifier>{c61c2045-ae20-45ae-8406-42e7b68a4a70}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\include\physlib">
+      <UniqueIdentifier>{3583ef83-aa8f-445f-a611-a91401107428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\ODE">
+      <UniqueIdentifier>{fd571d46-a9be-4990-9940-d8434de870a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Trajectories">
+      <UniqueIdentifier>{2592c355-b3df-496b-9e0d-de0e602307b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\LinearAlgebra">
+      <UniqueIdentifier>{cd8f7b68-e8cf-44ff-9472-ea7bedaf68be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Constants">
+      <UniqueIdentifier>{35071159-9b9b-42eb-a828-f69aeda8dd6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Control">
+      <UniqueIdentifier>{d4b02a41-0eb9-4b2a-a7d9-f6fb2dd2948f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Utils">
+      <UniqueIdentifier>{502800da-8134-4d97-877f-0cf71c1f263c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Units">
+      <UniqueIdentifier>{ce7af969-abe3-45d2-bdd6-edc4afae5475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\physlib\Mechanics">
+      <UniqueIdentifier>{135d2ec6-717a-405e-8d87-482cae890fc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp">
@@ -114,6 +141,72 @@
     </ClInclude>
     <ClInclude Include="include\mathlib\Interpolation\Interpolation.hpp">
       <Filter>Header Files\include\mathlib\Interpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\physlib.hpp">
+      <Filter>Header Files\include\physlib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\LinearAlgebra\EigenvalueSolver.hpp">
+      <Filter>Header Files\include\physlib\LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\LinearAlgebra\Jacobian.hpp">
+      <Filter>Header Files\include\physlib\LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\LinearAlgebra\LinearAlgebra.hpp">
+      <Filter>Header Files\include\physlib\LinearAlgebra</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Constants\Constants.hpp">
+      <Filter>Header Files\include\physlib\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Control\Control.hpp">
+      <Filter>Header Files\include\physlib\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Control\Optimisation.hpp">
+      <Filter>Header Files\include\physlib\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Control\PID.hpp">
+      <Filter>Header Files\include\physlib\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Mechanics\Dynamics.hpp">
+      <Filter>Header Files\include\physlib\Mechanics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Mechanics\Energy.hpp">
+      <Filter>Header Files\include\physlib\Mechanics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Mechanics\Kinematics.hpp">
+      <Filter>Header Files\include\physlib\Mechanics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Mechanics\Lagrangian.hpp">
+      <Filter>Header Files\include\physlib\Mechanics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Mechanics\Mechanics.hpp">
+      <Filter>Header Files\include\physlib\Mechanics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Units\Units.hpp">
+      <Filter>Header Files\include\physlib\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Utils\Utils.hpp">
+      <Filter>Header Files\include\physlib\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Trajectories\Interpolation.hpp">
+      <Filter>Header Files\include\physlib\Trajectories</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\Trajectories\Trajectories.hpp">
+      <Filter>Header Files\include\physlib\Trajectories</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\ODE\DynamicsSolvers.hpp">
+      <Filter>Header Files\include\physlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\ODE\ForceModel.hpp">
+      <Filter>Header Files\include\physlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\ODE\ODE.hpp">
+      <Filter>Header Files\include\physlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\ODE\ODEWrapper.hpp">
+      <Filter>Header Files\include\physlib\ODE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\physlib\ODE\TrajectoryIntegrators.hpp">
+      <Filter>Header Files\include\physlib\ODE</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
