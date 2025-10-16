@@ -10,7 +10,7 @@ namespace mathlib {
 		double EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < N; i += h) {
+			for (int i = 0; i < N; i++) {
 				y += h * f(t, y);
 				t += h;
 
@@ -24,7 +24,7 @@ namespace mathlib {
 		double RK2Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < N; i += h) {
+			for (int i = 0; i < N; i++) {
 				double y_next = y + h * f(t + h / 2, y + (h / 2) * f(t, y));
 				y = y_next;
 				t += h;
@@ -39,7 +39,7 @@ namespace mathlib {
 		double RK4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
-			for (double i = 0; i < N; i += h) {
+			for (int i = 0; i < N; i++) {
 				double k1 = h * f(t, y);
 				double k2 = h * f(t + h / 2.0, y + k1 / 2.0);
 				double k3 = h * f(t + h / 2.0, y + k2 / 2.0);
