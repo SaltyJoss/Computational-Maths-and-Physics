@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Create the library
 add_library(mathlib
-    ${PROJECT_SOURCE_DIR}/src/ODESolver.cpp
+    ${PROJECT_SOURCE_DIR}/src/ExplicitSolvers.cpp
 )
 
 # Tell CMake where to find headers when building and using the library

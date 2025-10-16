@@ -4,7 +4,7 @@
 #include <functional>
 
 namespace mathlib {
-	namespace ExplicitSolvers {
+	namespace ODE {
 
 		// Simple Euler method implementation
 		double EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
