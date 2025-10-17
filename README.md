@@ -26,8 +26,8 @@ TEST_F(ODETest, example_step) {
 		approx = y;
 	}
 
-	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "Example Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	double exact = std::exp(-t_final);
+	EXPECT_NEAR(approx, exact, tolerance) << "Example Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
 ```
 
