@@ -19,7 +19,6 @@ namespace mathlib::Integration {
 			y = step_function(f, t, y, dt);
 			t += dt;
 			trajectory.push_back(y);
-			;
 		}
 
 		return trajectory;

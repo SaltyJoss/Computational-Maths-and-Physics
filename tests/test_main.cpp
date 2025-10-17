@@ -3,7 +3,6 @@
  */
 #include <gtest/gtest.h>
 
-/*int main(int argc, char **argv) {
-	::testing::InitGoogleTest(&argc, argc);
-	return RUN_ALL_TESTS;
-}*/
+TEST(PlaceholderTest, DoesNothing) {
+	ASSERT_TRUE(true);
+}
