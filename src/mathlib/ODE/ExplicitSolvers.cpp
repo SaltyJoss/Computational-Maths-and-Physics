@@ -1,13 +1,13 @@
-#pragma message(">>> including ExplicitSolvers.hpp now...")
-#include "mathlib/ODE/ODE.hpp"
 #include <iostream>
 #include <functional>
 
-namespace mathlib {
+/*namespace mathlib {
 	namespace ODE {
 
+		template<typename T>
+
 		// Simple Euler method implementation
-		double EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
+		T EulerMethod(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
 			for (int i = 0; i < N; i++) {
@@ -21,7 +21,7 @@ namespace mathlib {
 		}
 
 		// Simple Runge-Kutta 2nd order / Midpoint method implementation
-		double RK2Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
+		T RK2Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
 			for (int i = 0; i < N; i++) {
@@ -36,7 +36,7 @@ namespace mathlib {
 		}
 
 		// Simple Runge-Kutta 4th order method implementation
-		double RK4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
+		T RK4Method(double y0, double t0, int N, double h, std::function<double(double, double)> f) {
 			double y = y0;
 			double t = t0;
 			for (int i = 0; i < N; i++) {
@@ -53,5 +53,5 @@ namespace mathlib {
 			return y;
 		}
 	}
-}
+}*/
 
