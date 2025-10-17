@@ -27,7 +27,7 @@ TEST_F(ODETest, example_step) {
 	}
 
 	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "EulerMethodExample failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	EXPECT_NEAR(approx, exact, 0.3) << "Example Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
 ```
 
