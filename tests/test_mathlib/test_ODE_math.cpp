@@ -12,7 +12,7 @@ protected:
 	double y0 = 1.0;	  // Initial condition
 	double t0 = 0.0;	  // Initial time
 	double t_final = 1.0; // Final time
-	double dt = 0.1;	  // Step size
+	double dt = 0.01;	  // Step size
 
 	double approx = 0.0;
 
@@ -38,8 +38,8 @@ TEST_F(ODETest, euler_step) {
 		approx = y;
 	}
 
-	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "Euler Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	double exact = std::exp(-t_final);
+	EXPECT_NEAR(approx, exact, 0.01) << "Euler Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
 
 // Test RK2 method
@@ -58,8 +58,8 @@ TEST_F(ODETest, rk2_step) {
 		approx = y;
 	}
 
-	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 1e-2) << "RK2 Method failed: Approx = " << approx << ", Exact = " << exact << "\n";
+	double exact = std::exp(-t_final);
+	EXPECT_NEAR(approx, exact, 1e-4) << "RK2 Method failed: Approx = " << approx << ", Exact = " << exact << "\n";
 }
 
 // Test RK4 method
@@ -78,6 +78,6 @@ TEST_F(ODETest, rk4_step) {
 		approx = y;
 	}
 
-	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 1e-5) << "RK4 Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	double exact = std::exp(-t_final);
+	EXPECT_NEAR(approx, exact, 1e-8) << "RK4 Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
