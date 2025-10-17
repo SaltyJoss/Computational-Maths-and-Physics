@@ -1,3 +1,7 @@
+message(STATUS "CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}")
+message(STATUS "GTest_DIR=${GTest_DIR}")
+message(STATUS "CMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}")
+
 enable_testing()
 find_package(GTest CONFIG REQUIRED)
 include(GoogleTest)

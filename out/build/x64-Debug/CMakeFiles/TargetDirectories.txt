@@ -1,0 +1,10 @@
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/mathlib.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/physlib.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/Main.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/test.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/tests/CMakeFiles/UnitTests.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/tests/CMakeFiles/test.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/tests/CMakeFiles/edit_cache.dir
+C:/Users/Joss/source/repos/PxM/out/build/x64-Debug/tests/CMakeFiles/rebuild_cache.dir

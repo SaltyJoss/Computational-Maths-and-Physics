@@ -1,10 +1,8 @@
 C:/Users/Joss/source/repos/PxM/build/CMakeFiles/mathlib.dir
 C:/Users/Joss/source/repos/PxM/build/CMakeFiles/physlib.dir
 C:/Users/Joss/source/repos/PxM/build/CMakeFiles/Main.dir
-C:/Users/Joss/source/repos/PxM/build/CMakeFiles/test.dir
-C:/Users/Joss/source/repos/PxM/build/CMakeFiles/edit_cache.dir
-C:/Users/Joss/source/repos/PxM/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Joss/source/repos/PxM/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/Joss/source/repos/PxM/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Joss/source/repos/PxM/build/CMakeFiles/ZERO_CHECK.dir
 C:/Users/Joss/source/repos/PxM/build/tests/CMakeFiles/UnitTests.dir
-C:/Users/Joss/source/repos/PxM/build/tests/CMakeFiles/test.dir
-C:/Users/Joss/source/repos/PxM/build/tests/CMakeFiles/edit_cache.dir
-C:/Users/Joss/source/repos/PxM/build/tests/CMakeFiles/rebuild_cache.dir
+C:/Users/Joss/source/repos/PxM/build/tests/CMakeFiles/RUN_TESTS.dir

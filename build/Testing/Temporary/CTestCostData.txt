@@ -1,4 +1,1 @@
-ODETest.EulerMethod 4 0.0291789
-ODETest.RK2Method 4 0.00179932
-ODETest.RK4Method 4 0.0017818
 ---
