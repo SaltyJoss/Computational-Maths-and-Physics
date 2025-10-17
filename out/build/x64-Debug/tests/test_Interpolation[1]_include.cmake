@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Joss/source/repos/Vectora/out/build/x64-Debug/tests/test_Interpolation[1]_tests.cmake")
-  include("C:/Users/Joss/source/repos/Vectora/out/build/x64-Debug/tests/test_Interpolation[1]_tests.cmake")
-else()
-  add_test(test_Interpolation_NOT_BUILT test_Interpolation_NOT_BUILT)
-endif()
