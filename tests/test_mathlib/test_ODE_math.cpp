@@ -39,17 +39,17 @@ TEST_F(ODETest, euler_step) {
 	}
 
 	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "EulerMethod failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	EXPECT_NEAR(approx, exact, 0.3) << "Euler Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
 
 // Test RK2 method
 TEST_F(ODETest, rk2_step) {
-	auto euler_lambda = [](const std::function<double(double, const double&)>& f, double t, const double& y, double dt) -> double {
+	auto rk2_lambda = [](const std::function<double(double, const double&)>& f, double t, const double& y, double dt) -> double {
 		return mathlib::ODE::rk2_step<double>(y, t, dt, f);
 		};
 
 	std::vector<double> trajectory = mathlib::Integration::integrate_ODE<double>(
-		f, y0, t0, t_final, dt, euler_lambda
+		f, y0, t0, t_final, dt, rk2_lambda
 	);
 
 	double t = t0;
@@ -59,17 +59,17 @@ TEST_F(ODETest, rk2_step) {
 	}
 
 	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "EulerMethod failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	EXPECT_NEAR(approx, exact, 1e-2) << "RK2 Method failed: Approx = " << approx << ", Exact = " << exact << "\n";
 }
 
 // Test RK4 method
 TEST_F(ODETest, rk4_step) {
-	auto euler_lambda = [](const std::function<double(double, const double&)>& f, double t, const double& y, double dt) -> double {
+	auto rk4_lambda = [](const std::function<double(double, const double&)>& f, double t, const double& y, double dt) -> double {
 		return mathlib::ODE::rk4_step<double>(y, t, dt, f);
 		};
 
 	std::vector<double> trajectory = mathlib::Integration::integrate_ODE<double>(
-		f, y0, t0, t_final, dt, euler_lambda
+		f, y0, t0, t_final, dt, rk4_lambda
 	);
 
 	double t = t0;
@@ -79,5 +79,5 @@ TEST_F(ODETest, rk4_step) {
 	}
 
 	double exact = (2 * std::exp(t_final)) - t_final - 1;
-	EXPECT_NEAR(approx, exact, 0.3) << "EulerMethod failed: Approx=" << approx << ", Exact=" << exact << "\n";
+	EXPECT_NEAR(approx, exact, 1e-5) << "RK4 Method failed: Approx=" << approx << ", Exact=" << exact << "\n";
 }
