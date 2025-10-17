@@ -6,7 +6,7 @@
 
 ## Latest Update
 
-### Updates- 205-10-17: Renaming project to PxM (Physics x Mathematics) to match libraries purpose.
+### Updates- 2025-10-17: Renaming project to PxM (Physics x Mathematics) to match libraries purpose.
 
 #### *Tests with* <ins>ERRORS</ins> *for explicit ODE solvers, using C++ and GoogleTest*.
 ```C++
