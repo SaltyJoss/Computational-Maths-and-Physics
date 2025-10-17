@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Joss/source/repos/Vectora/build/tests/test_ODE_math[1]_tests.cmake")
-  include("C:/Users/Joss/source/repos/Vectora/build/tests/test_ODE_math[1]_tests.cmake")
-else()
-  add_test(test_ODE_math_NOT_BUILT test_ODE_math_NOT_BUILT)
-endif()

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe")
+set(CMAKE_CXX_COMPILER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx86/x86/cl.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 set(CMAKE_CXX_COMPILER_VERSION "19.44.35217.0")
@@ -20,18 +20,18 @@ set(CMAKE_CXX_PLATFORM_ID "Windows")
 set(CMAKE_CXX_SIMULATE_ID "")
 set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "MSVC")
 set(CMAKE_CXX_SIMULATE_VERSION "")
-set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID x64)
+set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID X86)
 
-set(MSVC_CXX_ARCHITECTURE_ID x64)
+set(MSVC_CXX_ARCHITECTURE_ID X86)
 
-set(CMAKE_AR "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe")
+set(CMAKE_AR "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx86/x86/lib.exe")
 set(CMAKE_CXX_COMPILER_AR "")
 set(CMAKE_RANLIB ":")
 set(CMAKE_CXX_COMPILER_RANLIB "")
-set(CMAKE_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe")
-set(CMAKE_LINKER_LINK "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe")
+set(CMAKE_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx86/x86/link.exe")
+set(CMAKE_LINKER_LINK "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx86/x86/link.exe")
 set(CMAKE_LINKER_LLD "lld-link")
-set(CMAKE_CXX_COMPILER_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe")
+set(CMAKE_CXX_COMPILER_LINKER "C:/PROGRA~1/MIB055~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx86/x86/link.exe")
 set(CMAKE_CXX_COMPILER_LINKER_ID "MSVC")
 set(CMAKE_CXX_COMPILER_LINKER_VERSION 14.44.35217.0)
 set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT MSVC)
@@ -61,7 +61,7 @@ set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
 set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED )
 
 # Save compiler ABI information.
-set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
+set(CMAKE_CXX_SIZEOF_DATA_PTR "4")
 set(CMAKE_CXX_COMPILER_ABI "")
 set(CMAKE_CXX_BYTE_ORDER "LITTLE_ENDIAN")
 set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")
@@ -78,7 +78,7 @@ if(CMAKE_CXX_LIBRARY_ARCHITECTURE)
   set(CMAKE_LIBRARY_ARCHITECTURE "")
 endif()
 
-set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "")
+set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "Note: including file: ")
 if(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX)
   set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_CXX_CL_SHOWINCLUDES_PREFIX}")
 endif()
@@ -95,7 +95,7 @@ set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 
 set(CMAKE_CXX_COMPILER_IMPORT_STD "")
 ### Imported target for C++23 standard library
-set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Visual Studio 17 2022")
+set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Experimental `import std` support not enabled when detecting toolchain; it must be set before `CXX` is enabled (usually a `project()` call)")
 
 
 

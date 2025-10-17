@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Joss/source/repos/Vectora/build/tests/test_LinearAlgebra_phys[1]_tests.cmake")
-  include("C:/Users/Joss/source/repos/Vectora/build/tests/test_LinearAlgebra_phys[1]_tests.cmake")
-else()
-  add_test(test_LinearAlgebra_phys_NOT_BUILT test_LinearAlgebra_phys_NOT_BUILT)
-endif()
