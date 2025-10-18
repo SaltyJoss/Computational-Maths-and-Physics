@@ -1,7 +1,7 @@
 #pragma once
-#include "cmaths.hpp"
+#include "mathlib/Constants/cmath.hpp"
 
-namespace PxM::physlib::cphys {
+namespace physlib::cphys {
 
     // Fundamental physics constants
     inline constexpr double G = 6.67430e-11;
@@ -17,10 +17,10 @@ namespace PxM::physlib::cphys {
     inline constexpr double vacuum_density = 0.0;
 
     // Derived constants from c_math (automatically convert to double)
-    inline constexpr double pi = mathlib::cmath::c_maths::pi;
-    inline constexpr double two_pi = mathlib::cmath::c_maths::two_pi;
-    inline constexpr double pi_over_2 = mathlib::cmath::c_maths::pi_over_2;
-    inline constexpr double pi_over_4 = mathlib::cmath::c_maths::pi_over_4;
-    inline constexpr double one_over_pi = mathlib::cmath::c_maths::inv_pi;
-    inline constexpr double two_over_pi = mathlib::cmath::c_maths::two_over_pi;
+    inline constexpr double p_pi = mathlib::cmath::pi;
+    inline constexpr double p_two_pi = mathlib::cmath::two_pi;
+    inline constexpr double p_pi_over_2 = mathlib::cmath::pi_over_2;
+    inline constexpr double p_pi_over_4 = mathlib::cmath::pi_over_4;
+    inline constexpr double p_one_over_pi = mathlib::cmath::inv_pi;
+    inline constexpr double p_two_over_pi = mathlib::cmath::two_over_pi;
 }
