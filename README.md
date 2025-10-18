@@ -6,7 +6,7 @@
 
 ## Latest Update
 
-### Updates- 2025-10-17: Testing logic changed: ALL *<ins> PASSED</ins>*
+### Updates- 2025-10-18: Added fundamental mathematical and physical constants
 
 #### *Main test for physics & mathematics constants*
 
