@@ -40,7 +40,6 @@ namespace mathlib {
 
 		// ---< MATRIX ADDITIONS >---
 
-		/*
 		// Matrix-Scalar Addition
 		inline Mat3x3 operator+(const double& s) const {
 			Mat3x3 r;
@@ -48,7 +47,7 @@ namespace mathlib {
 				
 			}
 			return r;
-		}*/
+		}
 
 		// Matrix-Vector Addition
 		inline Mat3x3 operator+(const Vec3d& v) const {
@@ -71,7 +70,6 @@ namespace mathlib {
 
 		// ---< MATRIX SUBTRACTIONS >---
 
-		/*
 		// Matrix-Scalar Subtraction
 		inline Mat3x3 operator-(const double& s) const {
 			Mat3x3 r;
@@ -79,7 +77,7 @@ namespace mathlib {
 
 			}
 			return r;
-		}*/
+		}
 
 		// Matrix-Vector Subtraction
 		inline Mat3x3 operator-(const Vec3d& v) const {
@@ -102,7 +100,6 @@ namespace mathlib {
 
 		// ---< MATRIX MULTIPLICATIONS >---
 
-		/*
 		// Matrix-Scalar Multiplication
 		inline Mat3x3 operator+(const double& s) const {
 			Mat3x3 r;
@@ -110,7 +107,7 @@ namespace mathlib {
 
 			}
 			return r;
-		}*/
+		}
 
 		// Matrix-Vector multiplication
 		inline Vec3d operator*(const Vec3d& v) const {
@@ -127,13 +124,13 @@ namespace mathlib {
 			}
 			return r;
 		}
-
-		// Debug Output
-		inline std::ostream& operator<<(std::ostream& os, const Mat3x3& m) {
-			for (int i = 0; i < 3; i++) os << m.rows[i] << "\n";
-			return os;
-		}
 	};
+
+	// Debug Output
+	inline std::ostream& operator<<(std::ostream& os, const Mat3x3& m) {
+		for (int i = 0; i < 3; i++) os << m.rows[i] << "\n";
+		return os;
+	}
 }
 
 #endif // MAT3X3_H

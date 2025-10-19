@@ -22,10 +22,12 @@ namespace mathlib {
         inline double magnitude() const { return std::sqrt(x * x + y * y + z * z); } // calculate magnitude
         inline Vec3 normalised() const { double n = magnitude(); return n > 0 ? (*this) * (1.0 / n) : Vec3(); }   // normalise vector using magnitude
 
-        inline std::ostream& operator<<(std::ostream& os, const Vec3<T>& v) {
-            return os << "[" << v.x << ", " << v.y << ", " << v.z << "]";
-        }
 	};
+
+    // Debug Output
+    inline std::ostream& operator<<(std::ostream& os, const Vec3<T>& v) {
+        return os << "[" << v.x << ", " << v.y << ", " << v.z << "]";
+    }
 
     using Vec3d = Vec3<double>;
     using Vec3f = Vec3<float>;
