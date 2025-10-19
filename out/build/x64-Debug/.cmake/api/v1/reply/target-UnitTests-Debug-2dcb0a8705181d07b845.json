@@ -154,7 +154,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -237,7 +239,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -331,6 +335,18 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "tests/test_mathlib/test_Utils_math.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "tests/test_mathlib/test_Vec2d.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "tests/test_mathlib/test_Vec3d.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

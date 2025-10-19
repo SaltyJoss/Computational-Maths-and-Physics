@@ -507,6 +507,24 @@ build tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Utils_math.cpp.obj: CXX_C
   TARGET_COMPILE_PDB = tests\CMakeFiles\UnitTests.dir\
   TARGET_PDB = tests\UnitTests.pdb
 
+build tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Vec2d.cpp.obj: CXX_COMPILER__UnitTests_unscanned_Debug C$:\Users\Joss\source\repos\PxM\tests\test_mathlib\test_Vec2d.cpp || cmake_object_order_depends_target_UnitTests
+  DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
+  INCLUDES = -IC:\Users\Joss\source\repos\PxM\include\physlib -IC:\Users\Joss\source\repos\PxM\include\mathlib -IC:\Users\Joss\source\repos\PxM\include -external:IC:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\include -external:W0
+  OBJECT_DIR = tests\CMakeFiles\UnitTests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\UnitTests.dir\test_mathlib
+  TARGET_COMPILE_PDB = tests\CMakeFiles\UnitTests.dir\
+  TARGET_PDB = tests\UnitTests.pdb
+
+build tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Vec3d.cpp.obj: CXX_COMPILER__UnitTests_unscanned_Debug C$:\Users\Joss\source\repos\PxM\tests\test_mathlib\test_Vec3d.cpp || cmake_object_order_depends_target_UnitTests
+  DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
+  INCLUDES = -IC:\Users\Joss\source\repos\PxM\include\physlib -IC:\Users\Joss\source\repos\PxM\include\mathlib -IC:\Users\Joss\source\repos\PxM\include -external:IC:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\include -external:W0
+  OBJECT_DIR = tests\CMakeFiles\UnitTests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\UnitTests.dir\test_mathlib
+  TARGET_COMPILE_PDB = tests\CMakeFiles\UnitTests.dir\
+  TARGET_PDB = tests\UnitTests.pdb
+
 build tests\CMakeFiles\UnitTests.dir\test_mathlib\test_statistics.cpp.obj: CXX_COMPILER__UnitTests_unscanned_Debug C$:\Users\Joss\source\repos\PxM\tests\test_mathlib\test_statistics.cpp || cmake_object_order_depends_target_UnitTests
   DEFINES = -DGTEST_LINKED_AS_SHARED_LIBRARY=1
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
@@ -524,7 +542,7 @@ build tests\CMakeFiles\UnitTests.dir\test_mathlib\test_statistics.cpp.obj: CXX_C
 #############################################
 # Link the executable tests\UnitTests.exe
 
-build tests\UnitTests.exe tests\UnitTests[1]_tests.cmake | ${cmake_ninja_workdir}tests\UnitTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__UnitTests_Debug tests\CMakeFiles\UnitTests.dir\test_main.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Control.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_LinearAlgebra_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Mechanics.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_ODE_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Trajectories.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Units.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Utils_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Integration.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Interpolation.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_LinearAlgebra_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_ODE_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Optimisation.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_PDE.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Utils_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_statistics.cpp.obj | physlib.lib mathlib.lib C$:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\manual-link\gtest_main.lib C$:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\gtest.lib || mathlib.lib physlib.lib
+build tests\UnitTests.exe tests\UnitTests[1]_tests.cmake | ${cmake_ninja_workdir}tests\UnitTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__UnitTests_Debug tests\CMakeFiles\UnitTests.dir\test_main.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Control.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_LinearAlgebra_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Mechanics.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_ODE_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Trajectories.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Units.cpp.obj tests\CMakeFiles\UnitTests.dir\test_physlib\test_Utils_phys.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Integration.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Interpolation.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_LinearAlgebra_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_ODE_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Optimisation.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_PDE.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Utils_math.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Vec2d.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_Vec3d.cpp.obj tests\CMakeFiles\UnitTests.dir\test_mathlib\test_statistics.cpp.obj | physlib.lib mathlib.lib C$:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\manual-link\gtest_main.lib C$:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\gtest.lib || mathlib.lib physlib.lib
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = physlib.lib  mathlib.lib  C:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\manual-link\gtest_main.lib  C:\Users\Joss\Documents\Libraries\vcpkg\installed\x64-windows\debug\lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
