@@ -19,8 +19,8 @@ namespace mathlib {
 		inline double magnitude() const { return std::sqrt(x*x + y*y); } // magnitude
 		inline Vec2 normalised() const { double n = magnitude(); return n > 0 ? (*this) * (1.0 / n) : Vec2(); }	// normalise
 
-		friend std::ostream& operator<<(std::ostream& os, const Vec2& v) {
-			return os << "[" << v.x << ", " << v.y << "]";
+		inline std::ostream& operator<<(std::ostream& os, const Vec2<T>& v) {
+			return os << "[" << v.x << ", " << v.y << ", " << "]";
 		}
 	};
 
