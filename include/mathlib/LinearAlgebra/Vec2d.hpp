@@ -18,11 +18,12 @@ namespace mathlib {
 
 		inline double magnitude() const { return std::sqrt(x*x + y*y); } // magnitude
 		inline Vec2 normalised() const { double n = magnitude(); return n > 0 ? (*this) * (1.0 / n) : Vec2(); }	// normalise
-
-		inline std::ostream& operator<<(std::ostream& os, const Vec2<T>& v) {
-			return os << "[" << v.x << ", " << v.y << ", " << "]";
-		}
 	};
+
+	template<typename T>
+	inline std::ostream& operator<<(std::ostream& os, const Vec2<T>& v) {
+		return os << "[" << v.x << ", " << v.y << ", " << "]";
+	}
 
 	using Vec2d = Vec2<double>;
 	using Vec2f = Vec2<float>;

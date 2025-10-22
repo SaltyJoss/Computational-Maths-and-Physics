@@ -24,7 +24,7 @@ namespace mathlib {
 
 	};
 
-    // Debug Output
+    template<typename T>
     inline std::ostream& operator<<(std::ostream& os, const Vec3<T>& v) {
         return os << "[" << v.x << ", " << v.y << ", " << v.z << "]";
     }

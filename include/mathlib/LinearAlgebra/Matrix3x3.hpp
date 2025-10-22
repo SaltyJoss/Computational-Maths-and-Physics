@@ -44,7 +44,7 @@ namespace mathlib {
 		inline Mat3x3 operator+(const double& s) const {
 			Mat3x3 r;
 			for (int i = 0; i < 3; ++i) {
-				std::cout << "OPERATION NOT ADDED: Matrix-Scalar Addition";
+				r[i] = rows[i].x + s, rows[i].y + s, rows[i].z + s;
 			}
 			return r;
 		}
@@ -74,7 +74,7 @@ namespace mathlib {
 		inline Mat3x3 operator-(const double& s) const {
 			Mat3x3 r;
 			for (int i = 0; i < 3; ++i) {
-				std::cout << "OPERATION NOT ADDED: Matrix-Scalar Subtraction";
+				r[i] = rows[i].x - s, rows[i].y - s, rows[i].z - s;
 			}
 			return r;
 		}
@@ -104,7 +104,7 @@ namespace mathlib {
 		inline Mat3x3 operator*(const double& s) const {
 			Mat3x3 r;
 			for (int i = 0; i < 3; ++i) {
-				std::cout << "OPERATION NOT ADDED: Matrix-Scalar Multiplication";
+				r[i] = rows[i].x * s, rows[i].y * s, rows[i].z * s;
 			}
 			return r;
 		}
