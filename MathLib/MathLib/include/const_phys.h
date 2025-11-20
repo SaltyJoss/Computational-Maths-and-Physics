@@ -1,8 +1,9 @@
 #pragma once
+#include "MathLibAPI.h"
 #include "const_math.h"
 
 namespace constants {
-    class PhysConstants {
+    class MATHLIB_API PhysConstants {
 	public:
         // Fundamental physics constants
 		double G = 6.67430e-11;             // Gravitational constant (m^3 kg^-1 s^-2)
@@ -18,14 +19,12 @@ namespace constants {
 		double vacuum_density = 0.0;            // Vacuum density (kg/m^3)
 
 		// Derived constants from const_math (automatically convert to double), cleaner way to access them
-        double p_pi = math.pi;
-        double p_two_pi = math.two_pi;
-        double p_pi_over_2 = math.pi_over_2;
-        double p_pi_over_4 = math.pi_over_4;
-        double p_one_over_pi = math.inv_pi;
-        double p_two_over_pi = math.two_over_pi;
+		static constexpr double PI = (double)constants::MathConstants::pi;
+		static constexpr double TWO_PI = (double)constants::MathConstants::two_pi;
+		static constexpr double PI_OVER_2 = (double)constants::MathConstants::pi_over_2;
+		static constexpr double PI_OVER_4 = (double)constants::MathConstants::pi_over_4;
+		static constexpr double ONE_OVER_PI = (double)constants::MathConstants::inv_pi;
+		static constexpr double TWO_OVER_PI = (double)constants::MathConstants::two_over_pi;
 
-    private:
-		MathConstants math;
     };
 }
