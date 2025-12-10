@@ -3,10 +3,12 @@
 #include "MathLibAPI.h"
 #include "core/Types.h"
 
+using namespace mathlib;
+
 namespace kinematics {
 	enum class JointType {
-		Revolute,
-		Prismatic
+		Revolute,	// Revolute joints are represented by rotation about an axis
+		Prismatic	// Prismatic joints are represented by translation along an axis
 	};
 
 	/// <summary>
@@ -29,6 +31,27 @@ namespace kinematics {
 		/// <param name="joint_val">Joint variable (angle or displacement)</param>
 		/// <returns>Transformation matrix</returns>
 		Mat4 dhTransform(const DH_Params& p, double joint_val);
+		
+		/// <summary>
+		/// Determines whether the specified joint p is revolute.
+		/// </summary>
+		/// <param name="p">The p.</param>
+		/// <returns>
+		///   <c>true</c> if [is joint revolute] [the specified p]; otherwise, <c>false</c>.
+		/// </returns>
+		bool isJointRevolute(const DH_Params& p) const {
+			return p.type == JointType::Revolute;
+		}
+		
+		/// <summary>
+		/// Determines whether the specified joint p is prismatic.
+		/// </summary>
+		/// <param name="p">The joint.</param>
+		/// <returns>
+		///   <c>true</c> if [is joint prismatic] [the specified p]; otherwise, <c>false</c>.
+		/// </returns>
+		bool isJointPrismatic(const DH_Params& p) const {
+			return p.type == JointType::Prismatic;
+		}
 	};
-
 }

@@ -23,5 +23,6 @@ namespace kinematics {
 		/// <param name="dh_p">Denavit-Hartenberg parameters for each joint</param>
 		/// <param name="q">Joint variables (angles for revolute joints, displacements for prismatic joints)</param>
 		/// <returns>Vector of transformation matrices for each link</returns>
-		std::vector<Pose> linkTransformas(const std::vector<DH_Params>& dh_p, const VecX& q);
+		std::vector<Pose> linkTransforms(const std::vector<DH_Params>& dh_p, const VecX& q);
+	};
 }

@@ -19,6 +19,11 @@ namespace kinematics {
 		/// Constructor for JointTrajectory
 		/// </summary>
 		JointTrajectory(const std::vector<JointTrajectoryPoint>& points);
+		
+		/// <summary>
+		/// The trajectory points that define the joint trajectory
+		/// </summary>
+		std::vector<JointTrajectoryPoint> trajectoryPoints;
 
 		/// <summary>
 		/// Evaluate the trajectory at time t to get joint positions

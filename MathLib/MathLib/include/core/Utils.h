@@ -1,6 +1,11 @@
 #pragma once
 
 #include "MathLibAPI.h"
+#include "core/Types.h"
+#include "core/constants.h"
+
+using namespace mathlib;
+using namespace constants;
 
 namespace mathlib {
 	// Convert std::array to Eigen::Vector3d
@@ -10,12 +15,12 @@ namespace mathlib {
 
 	// Convert degrees to radians
 	double deg2rad(double degrees) {
-		return degrees * (M_PI / 180.0);
+		return degrees * (PI / 180.0);
 	}
 
 	// Convert radians to degrees
 	double rad2deg(double radians) {
-		return radians * (180.0 / M_PI);
+		return radians * (180.0 / PI);
 	}
 
 	// Compute the Euclidean norm of a vector
