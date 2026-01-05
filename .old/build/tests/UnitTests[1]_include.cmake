@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Joss/source/repos/PxM/build/tests/UnitTests[1]_tests.cmake")
+  include("C:/Users/Joss/source/repos/PxM/build/tests/UnitTests[1]_tests.cmake")
+else()
+  add_test(UnitTests_NOT_BUILT UnitTests_NOT_BUILT)
+endif()
