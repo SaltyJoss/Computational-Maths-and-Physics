@@ -1,4 +1,4 @@
-// PxMLib/MathLib_Unit/IntegratorTests main.cpp
+// PxMLib/PhysLib_Unit/IntegratorTests main.cpp
 #include "TestHarness.h"
 
 #ifdef _WIN32
@@ -17,7 +17,7 @@ int main() {
 #endif
 
 	std::cout << "========================================\n";
-	std::cout << "  Integration Method Unit Tests\n";
+	std::cout << "  Single Body System Unit Tests\n";
 	std::cout << "========================================\n";
 
 	int failures = test::runAll();
