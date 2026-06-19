@@ -15,5 +15,11 @@
             "inherits": "base",
             "description": "Default configuration for building PxMLib, given its a header-only library, this preset is used to generate the necessary build files."
         }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default"
+        }
     ]
 }

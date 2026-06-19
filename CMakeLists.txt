@@ -8,6 +8,11 @@ if (MSVC)
     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 endif()
 
+set(OUTPUT_BASE ${CMAKE_BINARY_DIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_BASE}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_BASE}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_BASE}/lib)
+
 include(FetchContent)
 
 # --- External Dependencies ---
