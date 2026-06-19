@@ -1,7 +1,8 @@
 # Build folders
-/build/
-/CMakeFiles/
-/CMakeCache.txt
+*/build/
+*/out/build/
+*/CMakeFiles/
+*/CMakeCache.txt
 
 # IDE files
 *.sln

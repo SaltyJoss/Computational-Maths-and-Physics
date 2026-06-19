@@ -1,0 +1,19 @@
+﻿{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "DSFE_ENABLE_GUI": "OFF"
+            }
+        },
+        {
+            "name": "default",
+            "inherits": "base",
+            "description": "Default configuration for building PxMLib, given its a header-only library, this preset is used to generate the necessary build files."
+        }
+    ]
+}
