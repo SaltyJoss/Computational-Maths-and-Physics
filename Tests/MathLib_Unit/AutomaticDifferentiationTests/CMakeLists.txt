@@ -15,7 +15,7 @@ target_link_libraries(MathLib_ADTests PRIVATE
 )
 
 target_include_directories(MathLib_ADTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)

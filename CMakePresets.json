@@ -17,14 +17,23 @@
     ],
     "buildPresets": [
         {
-            "name": "default",
-            "configurePreset": "default"
+            "name": "default-debug",
+            "configurePreset": "default",
+            "configuration": "Debug",
+            "description": "Builds the library in Debug mode."
+        },
+        {
+            "name": "default-release",
+            "configurePreset": "default",
+            "configuration": "Release",
+            "description": "Builds the library in Release mode."
         }
     ],
     "testPresets": [
         {
-            "name": "default",
+            "name": "default-release",
             "configurePreset": "default",
+            "configuration": "Release",
             "output": { "outputOnFailure": true }
         }
     ]

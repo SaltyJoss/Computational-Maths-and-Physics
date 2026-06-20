@@ -12,7 +12,7 @@ target_link_libraries(PhysLib_SingleBodySystemTests PRIVATE
 )
 
 target_include_directories(PhysLib_SingleBodySystemTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)

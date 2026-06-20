@@ -15,7 +15,7 @@ target_link_libraries(MathLib_IntegratorTests PRIVATE
 )
 
 target_include_directories(MathLib_IntegratorTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)
