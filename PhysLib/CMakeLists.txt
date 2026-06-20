@@ -9,6 +9,5 @@ target_include_directories(PhysLib INTERFACE
 )
 
 target_link_libraries(PhysLib INTERFACE
-    Eigen3::Eigen
     MathLib
 )
