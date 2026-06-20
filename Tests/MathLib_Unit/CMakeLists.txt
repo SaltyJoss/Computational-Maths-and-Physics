@@ -1,4 +1,4 @@
-# CMakeLists.txt for MathLib_Unit_Tests executable
+# PxMLib/Tests/MathLib_Unit/CMakeLists.txt
 add_subdirectory(IntegratorTests)
 add_subdirectory(DualNumberTests)
 add_subdirectory(AutomaticDifferentiationTests)

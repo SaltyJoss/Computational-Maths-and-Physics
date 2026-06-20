@@ -34,6 +34,6 @@ FetchContent_MakeAvailable(googletest)
 
 # --- Subdirectories ---
 add_subdirectory(MathLib)
-add_subdirectory(MathLib_Unit)
 add_subdirectory(PhysLib)
-add_subdirectory(PhysLib_Unit)
+add_subdirectory(Tests)
+

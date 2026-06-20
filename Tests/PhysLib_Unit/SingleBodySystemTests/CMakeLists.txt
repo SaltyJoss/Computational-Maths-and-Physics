@@ -1,4 +1,4 @@
-# CMakeLists.txt for MathLib_Unit_Tests executable
+# PxMLib/Tests/PhysLib_Unit/SingleBodySystemTests/CMakeLists.txt
 enable_testing()
 
 add_executable(PhysLib_SingleBodySystemTests
@@ -12,7 +12,7 @@ target_link_libraries(PhysLib_SingleBodySystemTests PRIVATE
 )
 
 target_include_directories(PhysLib_SingleBodySystemTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../Common
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Common
 )
 
 include(GoogleTest)
