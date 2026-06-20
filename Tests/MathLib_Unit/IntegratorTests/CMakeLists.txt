@@ -1,6 +1,4 @@
 # CMakeLists.txt for MathLib_Unit_Tests executable
-enable_testing()
-
 add_executable(MathLib_IntegratorTests
     main.cpp
     AdaptiveMethodTests.cpp

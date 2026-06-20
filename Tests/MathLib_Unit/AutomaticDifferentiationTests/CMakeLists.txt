@@ -1,6 +1,4 @@
 # PxMLib/Tests/MathLib_Unit/AutomaticDifferentiationTests/CMakeLists.txt
-enable_testing()
-
 add_executable(MathLib_ADTests
     main.cpp
     ADNewtonTests.cpp

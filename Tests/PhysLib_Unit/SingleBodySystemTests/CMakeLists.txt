@@ -1,6 +1,4 @@
 # PxMLib/Tests/PhysLib_Unit/SingleBodySystemTests/CMakeLists.txt
-enable_testing()
-
 add_executable(PhysLib_SingleBodySystemTests
     main.cpp
     SingleBodySystemDynamicsTests.cpp
