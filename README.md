@@ -22,6 +22,8 @@ This allows the library to become a useful tool for anyone designing mathematics
 > I am opening to ANY feedback, I am self-taught in higher mathematics/physics and willing to develop my understanding anywhere I can. 
 
 <!-- LANGUAGE BADGES -->
+[C]: https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white
+[C-url]: https://en.cppreference.com/w/c/language
 [C++]: https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=C%2B%2B&logoColor=white
 [C++-url]: https://isocpp.org/
 
