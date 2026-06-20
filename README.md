@@ -7,7 +7,7 @@
 ### What is PxM?
 PxM is a physics and mathematics library built on the extensive and repute Eigen linear algebra library for C++.<br />
 It started off as a library primarily for the [DSFE][dsfe-url] project, however I am aiming to push it into a generalised direction.<br />
-This allows the library to become a useful tool for anyone designing mathematics- or physical-oreintated computational tools/programs.<br />
+This allows the library to become a useful tool for anyone designing mathematics- or physics-based computational tools/programs.<br />
 
 <!-- What does PxM use -->
 ### What is it built on?
