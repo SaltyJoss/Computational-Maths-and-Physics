@@ -1,0 +1,40 @@
+﻿{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        },
+        {
+            "name": "default",
+            "inherits": "base",
+            "description": "Default configuration for building PxMLib, given its a header-only library, this preset is used to generate the necessary build files."
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default-debug",
+            "configurePreset": "default",
+            "configuration": "Debug",
+            "description": "Builds the library in Debug mode."
+        },
+        {
+            "name": "default-release",
+            "configurePreset": "default",
+            "configuration": "Release",
+            "description": "Builds the library in Release mode."
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "default-release",
+            "configurePreset": "default",
+            "configuration": "Release",
+            "output": { "outputOnFailure": true }
+        }
+    ]
+}

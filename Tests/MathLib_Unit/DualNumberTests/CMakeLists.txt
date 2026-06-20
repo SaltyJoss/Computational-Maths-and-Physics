@@ -1,6 +1,4 @@
 # CMakeLists.txt for MathLib_Unit_Tests executable
-enable_testing()
-
 add_executable(MathLib_DualNumberTests
     main.cpp
     ArithmeticTests.cpp
@@ -20,7 +18,7 @@ target_link_libraries(MathLib_DualNumberTests PRIVATE
 )
 
 target_include_directories(MathLib_DualNumberTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)

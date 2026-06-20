@@ -1,6 +1,4 @@
 # CMakeLists.txt for MathLib_Unit_Tests executable
-enable_testing()
-
 add_executable(MathLib_IntegratorTests
     main.cpp
     AdaptiveMethodTests.cpp
@@ -15,7 +13,7 @@ target_link_libraries(MathLib_IntegratorTests PRIVATE
 )
 
 target_include_directories(MathLib_IntegratorTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)

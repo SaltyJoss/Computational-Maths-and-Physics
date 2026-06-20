@@ -1,6 +1,4 @@
-# CMakeLists.txt for MathLib_Unit_Tests executable
-enable_testing()
-
+# PxMLib/Tests/MathLib_Unit/AutomaticDifferentiationTests/CMakeLists.txt
 add_executable(MathLib_ADTests
     main.cpp
     ADNewtonTests.cpp
@@ -15,7 +13,7 @@ target_link_libraries(MathLib_ADTests PRIVATE
 )
 
 target_include_directories(MathLib_ADTests PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../Common
+    ${COMMON_DIR}
 )
 
 include(GoogleTest)
