@@ -19,7 +19,7 @@ namespace physlib::collision {
                std::abs(b.halfExtents.y() * mathlib::dot(axis, b.axis(1))) +
                std::abs(b.halfExtents.z() * mathlib::dot(axis, b.axis(2)));
     }
-    //
+    // Separating Axis Theorem (SAT) for OBB-OBB collision detection
     inline bool SAT_OBB(const OBB& a, const OBB& b, ContactManifold& manifold) {
         mathlib::Vec3 d = b.centre - a.centre; // Vector from A to B
         double minPen = std::numeric_limits<double>::max();
