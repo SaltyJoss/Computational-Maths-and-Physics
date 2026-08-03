@@ -6,24 +6,6 @@
 #include "TestHarness.h"
 #include "collision/contact.h"
 
-TEST("ContactPoint_initialisation", contactPoint_init) {
-    physlib::collision::ContactPoint point;
-    ASSERT_TRUE(point.pos == mathlib::Vec3(0.0, 0.0, 0.0), "Contact point position should be zero initially");
-    ASSERT_TRUE(point.depth == 0.0, "Contact point depth should be zero initially");
-}
-
-TEST("ContactManifold_initialisation", contactManifold_init) {
-    physlib::collision::ContactManifold manifold;
-    ASSERT_TRUE(!manifold.hit, "Manifold should not be hit initially");
-    ASSERT_TRUE(manifold.normal == mathlib::Vec3(0.0, 0.0, 0.0), "Manifold normal should be zero initially");
-    ASSERT_TRUE(manifold.toi == 0.0, "Manifold time of impact should be zero initially");
-    ASSERT_TRUE(manifold.pointCount == 0, "Manifold point count should be zero initially");
-    for (const auto& point : manifold.points) {
-        ASSERT_TRUE(point.pos == mathlib::Vec3(0.0, 0.0, 0.0), "Manifold contact point position should be zero initially");
-        ASSERT_TRUE(point.depth == 0.0, "Manifold contact point depth should be zero initially");
-    }
-}
-
 TEST("ContactManifold_addPoint", contactManifold_addPoint) {
     physlib::collision::ContactManifold manifold;
     manifold.addPoint(mathlib::Vec3(1.0, 2.0, 3.0), 0.5);

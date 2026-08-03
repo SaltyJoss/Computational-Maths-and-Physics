@@ -5,7 +5,6 @@
  */
 #include "TestHarness.h"
 #include "collision/SAT.h"
-#include <constants>
 
 using namespace constants;
 
