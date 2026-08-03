@@ -1,6 +1,7 @@
 # PxMLib/Tests/PhysLib_Unit/SingleBodySystemTests/CMakeLists.txt
 add_executable(PhysLib_CollisionTests
     main.cpp
+    ContactSolverTests.cpp
     ContactTests.cpp
     OBBTests.cpp
     SATTests.cpp
