@@ -39,10 +39,11 @@ namespace mathlib::collision {
         double normalImpulse,
         double mu
     ) {
-        if (effectiveMassT < 1e-12) { return mathlib::Vec3::Zero(); } // Avoid division by zero
+        if (effectiveMassT < 1e-12) { return mathlib::Vec3::Zero(); }
+        if (mu <= 0.0 || normalImpulse <= 0.0) { return mathlib::Vec3::Zero(); }  // no friction cone
         const double vRelT = relVelAtContact.dot(tangentDir);
         double jt = -vRelT / effectiveMassT;
-        const double jt_max = mu * normalImpulse;
+        const double jt_max = mu * normalImpulse;   // now guaranteed >= 0
         jt = std::clamp(jt, -jt_max, jt_max);
         return jt * tangentDir;
     }

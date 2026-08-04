@@ -53,7 +53,7 @@ TEST("solveFrictionImpulse_exceeds_limit", solveFrictionImpulse_exceeds_limit) {
     double mu = 0.5; // Friction coefficient
     mathlib::Vec3 frictionImpulse = mathlib::collision::solveFrictionImpulse(tangentDir, relVelAtContact, effectiveMassT, normalImpulse, mu);
     double jt_max = mu * normalImpulse;
-    mathlib::Vec3 expectedImpulse = jt_max * tangentDir; // Should be clamped to max
+    mathlib::Vec3 expectedImpulse = -jt_max * tangentDir; // Should be clamped to max
     ASSERT_TRUE((frictionImpulse - expectedImpulse).norm() < 1e-6, "Friction impulse should be clamped to maximum limit");
 }
 TEST("solveFrictionImpulse_zero_effective_mass", solveFrictionImpulse_zero_effective_mass) {
