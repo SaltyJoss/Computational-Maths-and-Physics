@@ -1,0 +1,38 @@
+/*
+ * File: PhysLib/include/collision/OBB.h
+ * Oriented Bounding Box (OBB) AND axis-Aligned Bounding Box (AABB) class for collision detection.
+ * Current state is PURE geometry, double-only (collision detection is NOT differentiated)
+ * Created by: Joss Salton, 03-08-2026
+ */
+#ifndef PHYSICS_COLLISION_OBB_H
+#define PHYSICS_COLLISION_OBB_H
+
+#pragma once
+#include <MathLib>
+
+namespace physlib::collision {
+    // Axis-Aligned Bounding Box (AABB) in some frame (local OR world). Min/max corners
+    struct AABB {
+        mathlib::Vec3 min;
+        mathlib::Vec3 max;
+        mathlib::Vec3 centre() const { return 0.5 * (min + max); }
+        mathlib::Vec3 halfExtents() const { return 0.5 * (max - min); }
+    };
+
+    struct OBB {
+        mathlib::Vec3 centre; // centre of the box
+        mathlib::Vec3 halfExtents; // half extents along each axis
+        mathlib::Mat3 orientation; // rotation matrix representing the orientation of the box
+        mathlib::Vec3 axis(int i) const { return orientation.col(i); } // get the i-th axis of the box
+        // Create an OBB from an AABB, given a rotation matrix R and translation vector t
+        static OBB fromAABB(const AABB& box, const mathlib::Mat3& R, const mathlib::Vec3& t) {
+            OBB o;
+            o.centre = box.centre(); // Centre of the AABB is the centre of the OBB
+            o.halfExtents = t + R * box.halfExtents(); // Transform the half extents of the AABB to the OBB's orientation and add translation
+            o.orientation = R; // Set the orientation of the OBB to the given rotation matrix
+            return o;
+        }
+    };
+} // namespace physlib::collision
+
+#endif
