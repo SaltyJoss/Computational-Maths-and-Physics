@@ -3,10 +3,11 @@
  * Contact manifold produced by narrowphase.
  * Created by: Joss Salton, 03-08-2026
  */
+#pragma once
+
 #ifndef PHYSICS_COLLISION_CONTACT_H
 #define PHYSICS_COLLISION_CONTACT_H
 
-#pragma once
 #include <MathLib>
 #include <array>
 #include <cstdint>

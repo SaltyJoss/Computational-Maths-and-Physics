@@ -3,15 +3,16 @@
  * Contact solver for collision resolution.
  * Created by: Joss Salton, 03-08-2026
  */
+#pragma once
+
 #ifndef PHYSICS_COLLISION_CONTACT_SOLVER_H
 #define PHYSICS_COLLISION_CONTACT_SOLVER_H
 
-#pragma once
 #include <MathLib>
 #include <algorithm>
 #include <cmath>
 
-namespace mathlib::collision {
+namespace physlib::collision {
     // Contact Impulse struct to store normal and tangent impulses
     struct ContactImpulse {
         double normalImpulse = 0.0;

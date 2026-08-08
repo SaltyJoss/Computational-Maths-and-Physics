@@ -4,10 +4,11 @@
  * Current state is PURE geometry, double-only (collision detection is NOT differentiated)
  * Created by: Joss Salton, 03-08-2026
  */
+#pragma once
+
 #ifndef PHYSICS_COLLISION_OBB_H
 #define PHYSICS_COLLISION_OBB_H
 
-#pragma once
 #include <MathLib>
 
 namespace physlib::collision {
