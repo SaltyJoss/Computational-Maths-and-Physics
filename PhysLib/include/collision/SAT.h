@@ -3,10 +3,11 @@
  * Separating Axis Theorem (SAT) for collision detection.
  * Created by: Joss Salton, 03-08-2026
  */
+#pragma once
+
 #ifndef PHYSICS_COLLISION_SAT_H
 #define PHYSICS_COLLISION_SAT_H
 
-#pragma once
 #include "collision/OBB.h"
 #include "collision/contact.h"
 #include <limits>
