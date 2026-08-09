@@ -55,7 +55,7 @@ namespace physlib::collision {
         manifold.hit = true;
         manifold.normal = minAxis;
         manifold.toi = 0.0;
-        manifold.addPoint(a.centre + minAxis * projectRadius(a, minAxis), minPen);
+        manifold.addPoint(0.5 * (a.centre + b.centre), minPen);
         return true;
     }
 } // namespace physlib::collision
