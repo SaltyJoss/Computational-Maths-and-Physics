@@ -55,7 +55,7 @@ namespace physlib::collision {
         manifold.hit = true;
         manifold.normal = minAxis;
         manifold.toi = 0.0;
-        // This is for the first cube-cube resolution (so a single representative point at the overlap centroiud is enough)
+        manifold.addPoint(a.centre + minAxis * projectRadius(a, minAxis), minPen);
         return true;
     }
 } // namespace physlib::collision
