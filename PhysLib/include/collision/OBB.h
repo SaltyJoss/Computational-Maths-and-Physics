@@ -28,8 +28,8 @@ namespace physlib::collision {
         // Create an OBB from an AABB, given a rotation matrix R and translation vector t
         static OBB fromAABB(const AABB& box, const mathlib::Mat3& R, const mathlib::Vec3& t) {
             OBB o;
-            o.centre = box.centre(); // Centre of the AABB is the centre of the OBB
-            o.halfExtents = t + R * box.halfExtents(); // Transform the half extents of the AABB to the OBB's orientation and add translation
+            o.centre = t + R * box.halfExtents(); // world centre = translation + rotated local centre
+            o.halfExtents = box.centre(); // half extents are a SIZE vector, never transformed or translated
             o.orientation = R; // Set the orientation of the OBB to the given rotation matrix
             return o;
         }
