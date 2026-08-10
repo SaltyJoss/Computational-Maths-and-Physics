@@ -9,6 +9,7 @@
 #define PHYSICS_COLLISION_CAPSULE_H
 
 #include <MathLib>
+#include "collision/OBB.h"
 #include "collision/contact.h"
 
 namespace physlib::collision {
@@ -82,6 +83,47 @@ namespace physlib::collision {
         // Contact point on capsule A
         const mathlib::Vec3 contact = c1 + norm * A.radius;
         m.addPoint(contact, depth); // Add the contact point to the manifold
+        return true;
+    }
+    // Computes the closest point on an OBB to a given point p
+    inline mathlib::Vec3 closestPtPointOBB(const mathlib::Vec3& p, const OBB& b) {
+        const mathlib::Vec3 d = p - b.centre; // Vector from box centre to point
+        mathlib::Vec3 q = b.centre; // Initialize closest point to box centre
+        // For each OBB axis, project d onto the axis and clamp to the box extents
+        for (int i = 0; i < 3; ++i) {
+            const mathlib::Vec3 axis = b.axis(i);
+            double dist = d.dot(axis); // Project d onto the axis
+           const double e = (i == 0 ? b.halfExtents.x() : (i == 1 ? b.halfExtents.y() : b.halfExtents.z()));
+            dist = std::clamp(dist, -e, e); // Clamp the distance to the box extents
+            q += dist * axis; // Move q along the axis by the clamped distance
+        }
+        return q; // Return the closest point on the OBB to point p
+    }
+    //
+    inline bool capsuleOBB(const Capsule& c, const OBB& b, ContactManifold& m) {
+        constexpr int samples = 8; // Number of samples along the capsule segment
+        double best_depth = -1e30;
+        mathlib::Vec3 best_norm, best_contact;
+        bool any = false;
+        for (int s = 0; s <= samples; ++s) {
+            const double t = static_cast<double>(s) / samples;
+            const mathlib::Vec3 pOnSpine = c.a + (c.b - c.a) * t; // Sample point along the capsule segment
+            const mathlib::Vec3 pOnBox = closestPtPointOBB(pOnBox, b); // Closest point on the OBB to the sample point
+            const mathlib::Vec3 delta = pOnBox - pOnSpine; // Vector from sample point to closest point on OBB
+            const double dist = delta.norm();
+            const double depth = c.radius - dist; // Penetration depth
+            if (depth > best_depth) { // Check for collision                if (depth > best_depth) { // Keep the deepest contact
+                best_depth = depth;
+                best_contact = pOnBox; // Contact point on the OBB
+                best_norm = (dist > 1e-9) ? delta / dist : mathlib::Vec3(0, 1, 0); // Normal vector
+                any = true;
+            }
+        }
+        if (!any || best_depth <= 0.0) { return false; } // No collision detected
+        m.hit = true;
+        m.normal = best_norm;
+        m.toi = 0.0;
+        m.addPoint(best_contact, best_depth); // Add the contact point to the manifold
         return true;
     }
 
