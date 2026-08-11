@@ -114,7 +114,7 @@ namespace physlib::collision {
             const double depth = c.radius - dist; // Penetration depth
             if (depth > best_depth) { // Check for collision                if (depth > best_depth) { // Keep the deepest contact
                 best_depth = depth;
-                best_contact = pOnBox; // Contact point on the OBB
+                best_contact = pOnSpine; // Contact point on the OBB
                 best_norm = (dist > 1e-9) ? delta / dist : mathlib::Vec3(0, 1, 0); // Normal vector
                 any = true;
             }
