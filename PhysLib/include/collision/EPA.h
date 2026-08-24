@@ -1,0 +1,89 @@
+/*
+ * File: PhysLib/include/collision/EPA.h
+ * Implementation of the EPA (Expanding Polytope Algorithm) for computing penetration depth and contact normals between convex shapes.
+ * Created by: Joss Salton, 03-08-2026
+ */
+#pragma once
+
+#include "GJK.h"
+#include "contact.h"
+#include <vector>
+
+namespace physlib::collision {
+    inline bool epaPenetration(const ConvexHull& A, const ConvexHull& B, Simplex& simplex, mathlib::Vec3& normal_out, double& depth_out) {
+        std::vector<mathlib::Vec3> poly(simplex.pts.begin(), simplex.pts.begin() + simplex.count);
+        if (poly.size() > 4) { return false; } // EPA only works with tetrahedra
+
+        struct Face {
+            int a, b, c;
+            mathlib::Vec3 n;
+            double dist;
+        };
+        auto makeFace = [&](int a, int b, int c) {
+            mathlib::Vec3 n = (poly[b] - poly[a]).cross(poly[c] - poly[a]);
+            if (n.norm() < 1e-12) { n = mathlib::Vec3(0.0, 0.0, 1.0); }
+            else { n.normalize(); }
+            double d = n.dot(poly[a]);
+            if (d < 0) {
+                n = -n;
+                d = -d;
+                std::swap(b, c);
+            }
+            return Face{a, b, c, n, d};
+        };
+        std::vector<Face> faces = {
+            makeFace(0, 1, 2),
+            makeFace(0, 2, 3),
+            makeFace(0, 3, 1),
+            makeFace(1, 3, 2)
+        };
+        for (int iter = 0; iter < 64; ++iter) {
+            int closest = 0;
+            for (int i = 1; i < faces.size(); ++i) {
+                if (faces[i].dist < faces[closest].dist) { closest = i; }
+            }
+            const mathlib::Vec3 n = faces[closest].n;
+            const mathlib::Vec3 sup = supportCSO(A, B, n);
+            const double d = sup.dot(n);
+            if (d - faces[closest].dist < 1e-4) {
+                normal_out = n;
+                depth_out = d;
+                return true;
+            }
+            std::vector<std::pair<int, int>> edges;
+            auto addEdge = [&](int a, int b) {
+                auto it = std::find(edges.begin(), edges.end(), std::make_pair(a, b));
+                if (it != edges.end()) { edges.erase(it); }
+                else { edges.emplace_back(b, a); }
+            };
+            for (int i = 0; i < faces.size(); --i) {
+                if (faces[i].n.dot(sup - poly[faces[i].a]) > 0) {
+                    addEdge(faces[i].a, faces[i].b);
+                    addEdge(faces[i].b, faces[i].c);
+                    addEdge(faces[i].c, faces[i].a);
+                    faces.erase(faces.begin() + i);
+                }
+            }
+            int newIdx = (int)poly.size();
+            poly.push_back(sup);
+            for (auto& e : edges) {
+                faces.push_back(makeFace(e.first, e.second, newIdx));
+            }
+        }
+        normal_out = faces.empty() ? mathlib::Vec3(0,1,0) : faces[0].n;
+        depth_out = faces.empty() ? 0.0 : faces[0].dist;
+        return true;
+    }
+    //
+    inline bool convexConvex(const ConvexHull& A, const ConvexHull& B, ContactManifold& m) {
+        Simplex s;
+        if (!gjkIntersect(A, B, s)) { return false; }
+        mathlib::Vec3 n;
+        double depth;
+        if (!epaPenetration(A, B, s, n, depth)) { return false; }
+        m.hit = true;
+        m.normal = n;
+        m.addPoint(0.5 * (A.centroid() + B.centroid()), depth);
+        return true;
+    }
+} // namespace physlib::collision
