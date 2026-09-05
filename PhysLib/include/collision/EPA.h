@@ -83,7 +83,8 @@ namespace physlib::collision {
         if (!epaPenetration(A, B, s, n, depth)) { return false; }
         m.hit = true;
         m.normal = n;
-        m.addPoint(0.5 * (A.centroid() + B.centroid()), depth);
+        const mathlib::Vec3 contact = B.support(-n);
+        m.addPoint(contact, depth);
         return true;
     }
 } // namespace physlib::collision
