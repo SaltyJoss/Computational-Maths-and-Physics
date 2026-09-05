@@ -32,6 +32,7 @@ namespace physlib::collision {
             s.count = 1;
             dir = ao;
         }
+        return false;
     }
     //
     inline bool doTriangle(Simplex& s, mathlib::Vec3& dir) {
@@ -81,6 +82,7 @@ namespace physlib::collision {
             s.count = 3;
             return doTriangle(s, dir);
         }
+        return true; // origin is inside the tetrahedron
     }
     // The next simplex function updates the simplex and direction based on the current simplex configuration.
     inline bool nextSimplex(Simplex& s, mathlib::Vec3& dir) {
