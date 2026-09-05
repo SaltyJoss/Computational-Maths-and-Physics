@@ -12,19 +12,25 @@
 namespace physlib::collision {
     inline bool epaPenetration(const ConvexHull& A, const ConvexHull& B, Simplex& simplex, mathlib::Vec3& normal_out, double& depth_out) {
         std::vector<mathlib::Vec3> poly(simplex.pts.begin(), simplex.pts.begin() + simplex.count);
-        if (poly.size() > 4) { return false; } // EPA only works with tetrahedra
+        if (poly.size() < 4) { return false; } // EPA only works with tetrahedra
 
         struct Face {
             int a, b, c;
             mathlib::Vec3 n;
             double dist;
         };
+        auto polyCentroid = [&]() {
+            mathlib::Vec3 c = mathlib::Vec3::Zero();
+            for (auto& p : poly) { c += p; }
+            return c / double(poly.size());
+        };
         auto makeFace = [&](int a, int b, int c) {
             mathlib::Vec3 n = (poly[b] - poly[a]).cross(poly[c] - poly[a]);
             if (n.norm() < 1e-12) { n = mathlib::Vec3(0.0, 0.0, 1.0); }
             else { n.normalize(); }
             double d = n.dot(poly[a]);
-            if (d < 0) {
+            const mathlib::Vec3 centre = polyCentroid();
+            if (n.dot(centre) - d < 0) {
                 n = -n;
                 d = -d;
                 std::swap(b, c);
@@ -52,11 +58,11 @@ namespace physlib::collision {
             }
             std::vector<std::pair<int, int>> edges;
             auto addEdge = [&](int a, int b) {
-                auto it = std::find(edges.begin(), edges.end(), std::make_pair(a, b));
+                auto it = std::find(edges.begin(), edges.end(), std::make_pair(b, a));
                 if (it != edges.end()) { edges.erase(it); }
                 else { edges.emplace_back(b, a); }
             };
-            for (int i = 0; i < faces.size(); --i) {
+            for (int i = (int)faces.size() - 1; i >= 0; --i) {
                 if (faces[i].n.dot(sup - poly[faces[i].a]) > 0) {
                     addEdge(faces[i].a, faces[i].b);
                     addEdge(faces[i].b, faces[i].c);
