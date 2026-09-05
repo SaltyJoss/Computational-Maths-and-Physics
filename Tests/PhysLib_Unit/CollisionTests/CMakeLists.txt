@@ -6,6 +6,7 @@ add_executable(PhysLib_CollisionTests
     ContactTests.cpp
     CapsuleTests.cpp
     ContactSolverTests.cpp
+    ConvexHullTests.cpp
 )
 
 target_link_libraries(PhysLib_CollisionTests PRIVATE
