@@ -14,6 +14,20 @@ namespace physlib::collision {
         std::vector<mathlib::Vec3> poly(simplex.pts.begin(), simplex.pts.begin() + simplex.count);
         if (poly.size() < 4) { return false; } // EPA only works with tetrahedra
 
+        auto tetVolume = [&](const std::vector<mathlib::Vec3>& p) -> double {
+            if (p.size() < 4) { return 0.0; }
+            return std::abs((p[1]-p[0]).dot((p[2]-p[0]).cross(p[3]-p[0]))) / 6.0; // Volume of tetrahedron
+        };
+        if (tetVolume(poly) < 1e-10) {
+            const mathlib::Vec3 dirs[6] = {{1,0,0}, {-1,0,0}, {0,1,0}, {0,-1,0}, {0,0,1}, {0,0,-1}};
+            for (int k = 0; k < 6; ++k) {
+                mathlib::Vec3 p = supportCSO(A, B, dirs[k]);
+                std::vector<mathlib::Vec3> test = { poly[0], poly[1], poly[2], p };
+                if (tetVolume(test) > 1e-10) { poly = test; break; }
+            }
+            if (tetVolume(poly) < 1e-10) { return false; } // Still degenerate
+        }
+
         struct Face {
             int a, b, c;
             mathlib::Vec3 n;
