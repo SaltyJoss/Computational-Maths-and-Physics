@@ -91,9 +91,9 @@ TEST("ConvexHull_hull_vs_hull_through_built_hulls", convexHull_buildHull_hull_vs
             (i & 4)?1.0:-1.0
         ));
         cb.push_back(mathlib::Vec3(
-            (i & 1)?2.0:0.0,
-            (i & 2)?2.0:0.0,
-            (i & 4)?2.0:0.0
+            (i & 1)?1.0:-1.0,
+            (i & 2)?1.0:-1.0,
+            (i & 4)?1.0:-1.0
         ) + mathlib::Vec3(1.5,0,0));
     }
     ConvexHull ha = buildHull(ca), hb = buildHull(cb);
