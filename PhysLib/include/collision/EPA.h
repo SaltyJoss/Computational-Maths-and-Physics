@@ -112,7 +112,9 @@ namespace physlib::collision {
         if (!epaPenetration(A, B, s, n, depth)) { return false; }
         m.hit = true;
         m.normal = n;
-        const mathlib::Vec3 contact = B.support(-n);
+        const mathlib::Vec3 pA = A.support(-n);
+        const mathlib::Vec3 pB = B.support(n);
+        const mathlib::Vec3 contact = 0.5 * (pA + pB);
         m.addPoint(contact, depth);
         return true;
     }
