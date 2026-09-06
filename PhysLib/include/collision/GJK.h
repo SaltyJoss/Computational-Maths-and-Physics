@@ -25,11 +25,15 @@ namespace physlib::collision {
     inline bool doLine(Simplex& s, mathlib::Vec3& dir) {
         const mathlib::Vec3 a = s.pts[0], b = s.pts[1];
         const mathlib::Vec3 ab = b - a, ao = -a;
-        if (sameDirection(ab, ao)) { dir = ab.cross(ao).cross(ab); }
+        if (sameDirection(ab, ao)) { 
+            dir = ab.cross(ao).cross(ab);
+            if (dir.squaredNorm() < 1e-18) {
+                mathlib::Vec3 axis = (std::abs(ab.x()) < 0.9) ? mathlib::Vec3(1,0,0) : mathlib::Vec3(0,1,0);
+                dir = ab.cross(axis);
+            }
+        }
         else {
-            s = {};
-            s.pts[0] = a;
-            s.count = 1;
+            s.pts[0] = a; s.count = 1;
             dir = ao;
         }
         return false;
@@ -41,22 +45,27 @@ namespace physlib::collision {
         const mathlib::Vec3 abc = ab.cross(ac);
         if (sameDirection(abc.cross(ac), ao)) {
             if (sameDirection(ac, ao)) {
-                s = {a, c};
+                s.pts[0] = a;
+                s.pts[1] = c;
                 s.count = 2;
                 dir = ac.cross(ao).cross(ac);
             } else {
-                s = {a, b};
+                s.pts[0] = a;
+                s.pts[1] = b;
                 s.count = 2;
                 return doLine(s, dir);
             }
         } else if (sameDirection(ab.cross(abc), ao)) {
-            s.pts = {a, b};
+            s.pts[0] = a;
+            s.pts[1] = b;
             s.count = 2;
             return doLine(s, dir);
         } else if (sameDirection(abc, ao)) {
             dir = abc;
         } else {
-            s = {a, c, b};
+            s.pts[0] = a;
+            s.pts[1] = c;
+            s.pts[2] = b;
             s.count = 3;
             dir = -abc;
         }
@@ -68,17 +77,23 @@ namespace physlib::collision {
         const mathlib::Vec3 ab = b - a, ac = c - a, ad = d - a, ao = -a;
         const mathlib::Vec3 abc = ab.cross(ac), acd = ac.cross(ad), adb = ad.cross(ab);
         if (sameDirection(abc, ao)) {
-            s.pts = {a, b, c};
+            s.pts[0] = a;
+            s.pts[1] = b;
+            s.pts[2] = c;
             s.count = 3;
             return doTriangle(s, dir);
         }
         if (sameDirection(acd, ao)) {
-            s.pts = {a, c, d};
+            s.pts[0] = a;
+            s.pts[1] = c;
+            s.pts[2] = d;
             s.count = 3;
             return doTriangle(s, dir);
         }
         if (sameDirection(adb, ao)) {
-            s.pts = {a, d, b};
+            s.pts[0] = a;
+            s.pts[1] = d;
+            s.pts[2] = b;
             s.count = 3;
             return doTriangle(s, dir);
         }
