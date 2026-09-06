@@ -10,6 +10,18 @@
 #include <vector>
 
 namespace physlib::collision {
+    static mathlib::Vec3 supportFaceCentre(const ConvexHull& h, const mathlib::Vec3& d) {
+        double best = -std::numeric_limits<double>::infinity();
+        for (const auto& v : h.verts) { best = std::max(best, v.dot(d)); }
+        mathlib::Vec3 sum = mathlib::Vec3::Zero();
+        int count = 0;
+        const double eps = 1e-4;
+        for (const auto& v : h.verts) { if (v.dot(d) - best < eps) { sum += v; ++count; } }
+        if (count) { return sum / double(count); }
+        return mathlib::Vec3::Zero();
+    }
+
+    // Compute the penetration depth and contact normal between two convex hulls A and B using the EPA algorithm.
     inline bool epaPenetration(const ConvexHull& A, const ConvexHull& B, Simplex& simplex, mathlib::Vec3& normal_out, double& depth_out) {
         std::vector<mathlib::Vec3> poly(simplex.pts.begin(), simplex.pts.begin() + simplex.count);
         if (poly.size() < 4) { return false; } // EPA only works with tetrahedra
@@ -103,7 +115,7 @@ namespace physlib::collision {
         depth_out = faces[closest].dist;
         return true;
     }
-    //
+    // Compute the contact manifold between two convex hulls A and B using GJK and EPA. Returns true if a collision is detected.
     inline bool convexConvex(const ConvexHull& A, const ConvexHull& B, ContactManifold& m) {
         Simplex s;
         if (!gjkIntersect(A, B, s)) { return false; }
@@ -112,8 +124,8 @@ namespace physlib::collision {
         if (!epaPenetration(A, B, s, n, depth)) { return false; }
         m.hit = true;
         m.normal = n;
-        const mathlib::Vec3 pA = A.support(-n);
-        const mathlib::Vec3 pB = B.support(n);
+        const mathlib::Vec3 pA = supportFaceCentre(A, n);
+        const mathlib::Vec3 pB = supportFaceCentre(B, -n);
         const mathlib::Vec3 contact = 0.5 * (pA + pB);
         m.addPoint(contact, depth);
         return true;
