@@ -108,11 +108,11 @@ namespace physlib::collision {
         for (int s = 0; s <= samples; ++s) {
             const double t = static_cast<double>(s) / samples;
             const mathlib::Vec3 pOnSpine = c.a + (c.b - c.a) * t; // Sample point along the capsule segment
-            const mathlib::Vec3 pOnBox = closestPtPointOBB(pOnBox, b); // Closest point on the OBB to the sample point
+            const mathlib::Vec3 pOnBox = closestPtPointOBB(pOnSpine, b); // Closest point on the OBB to the sample point
             const mathlib::Vec3 delta = pOnBox - pOnSpine; // Vector from sample point to closest point on OBB
             const double dist = delta.norm();
             const double depth = c.radius - dist; // Penetration depth
-            if (depth > best_depth) { // Check for collision                if (depth > best_depth) { // Keep the deepest contact
+            if (depth > best_depth) { // Check for collision
                 best_depth = depth;
                 best_contact = pOnSpine; // Contact point on the OBB
                 best_norm = (dist > 1e-9) ? delta / dist : mathlib::Vec3(0, 1, 0); // Normal vector
