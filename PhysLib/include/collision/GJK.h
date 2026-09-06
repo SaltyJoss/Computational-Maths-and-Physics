@@ -103,6 +103,9 @@ namespace physlib::collision {
         for (int iter = 0; iter < 64; ++iter) {
             sup = supportCSO(A, B, dir);
             if (sup.dot(dir) < 0.0) { return false; } // zero intersection
+            bool dup = false;
+            for (int i = 0; i < s.count; ++i) { if ((s.pts[i] - sup).norm() < 1e-6) { dup = true; break; } }
+            if (dup) { out = s; return true; } // intersection
             s.push_front(sup);
             if (nextSimplex(s, dir)) { out = s; return true; } // intersection
         }
