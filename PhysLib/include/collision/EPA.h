@@ -44,7 +44,7 @@ namespace physlib::collision {
             else { n.normalize(); }
             double d = n.dot(poly[a]);
             const mathlib::Vec3 centre = polyCentroid();
-            if (n.dot(centre) - d < 0) {
+            if (n.dot(centre) - d > 0) {
                 n = -n;
                 d = -d;
                 std::swap(b, c);
@@ -67,14 +67,14 @@ namespace physlib::collision {
             const double d = sup.dot(n);
             if (d - faces[closest].dist < 1e-4) {
                 normal_out = n;
-                depth_out = d;
+                depth_out = faces[closest].dist;
                 return true;
             }
             std::vector<std::pair<int, int>> edges;
             auto addEdge = [&](int a, int b) {
                 auto it = std::find(edges.begin(), edges.end(), std::make_pair(b, a));
                 if (it != edges.end()) { edges.erase(it); }
-                else { edges.emplace_back(b, a); }
+                else { edges.emplace_back(a, b); }
             };
             for (int i = (int)faces.size() - 1; i >= 0; --i) {
                 if (faces[i].n.dot(sup - poly[faces[i].a]) > 0) {
@@ -90,8 +90,17 @@ namespace physlib::collision {
                 faces.push_back(makeFace(e.first, e.second, newIdx));
             }
         }
-        normal_out = faces.empty() ? mathlib::Vec3(0,1,0) : faces[0].n;
-        depth_out = faces.empty() ? 0.0 : faces[0].dist;
+        if (faces.empty()) {
+            normal_out - mathlib::Vec3(0, 1, 0);
+            depth_out = 0.0;
+            return false;
+        }
+        int closest = 0;
+        for (int i = 1; i < faces.size(); ++i) {
+            if (faces[i].dist < faces[closest].dist) { closest = i; }
+        }
+        normal_out = faces[closest].n;
+        depth_out = faces[closest].dist;
         return true;
     }
     //
